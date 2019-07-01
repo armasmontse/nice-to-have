@@ -1,0 +1,21 @@
+.h-initial		{height: initial !important;}
+.pt3			{padding-top: s(3,m) !important;}
+.pl2			{padding-left: s(2) !important;}
+.tac 			{text-align: center !important;}
+.ttn 			{text-transform: none !important;}
+.flex-cont 		{display:flex !important;}
+.flex-cont--sb 	{display:flex !important; justify-content: space-between !important;}
+.flex-wrap 		{flex-wrap: wrap !important;}
+.flex-cont--center 	{display:flex !important; justify-content: center !important;}
+.flex-col		{flex-direction: column}
+.mb1m			{margin-bottom: s(1,m) !important;}
+.mb2m			{margin-bottom: s(2,m) !important;}
+.mb2-3m		    {margin-bottom: s(2/3,m) !important;}
+.mb3-2m		    {margin-bottom: s(3/2,m) !important;}
+.mb3m			{margin-bottom: s(3,m) !important;}
+.mb4m			{margin-bottom: s(4,m) !important;}
+.tal 			{text-align: left;}
+.tar 			{text-align: right;}
+.center-y 		{@include center('y');}
+.ovf-vis        {overflow: visible !important;}
+.g-recaptcha    {display: inline-block !important; margin-bottom: 14px !important; }

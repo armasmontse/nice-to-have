@@ -1,0 +1,219 @@
+@import "shopping-cart.grid";
+
+.shopping-cart {
+	
+	&__selected-variation {
+		.single__description--selected-variant {
+			border: none;
+			padding-left: 0;
+		}
+	}
+	&__link-container {
+		display: flex;
+		justify-content: center;
+		&--compra {
+			max-width: 190px;
+			width: auto;
+			text-align: center;
+			margin-right: auto;
+			margin-left: auto;
+			a {text-align: center;}
+			margin-bottom: s(2, m);
+		}
+	}
+
+	&__link {
+		@extend %link-underline;
+	}
+
+	&__menu {
+		margin-bottom: s(6);
+	}
+
+	&__link-menu-container {
+		max-width: 782px;
+		margin-right: auto;
+		margin-left: auto;
+		padding-top: 19px;
+		padding-bottom: 19px;
+		display: flex;
+		justify-content: space-between;
+
+		@include under(cart) {
+			flex-direction: column;
+			text-align: center;
+		}
+	}
+
+	&__link-menu {
+		@extend %link-menu;
+
+		@include under(cart) {
+			margin-bottom: 14px;
+			&:last-of-type {
+				margin-bottom: 0;
+				white-space: nowrap;
+			}
+		}
+	}
+
+	&__user-info-container {
+		text-align: center;
+		margin-bottom: 98px;
+	}
+
+	&__item-total-container {
+		margin-bottom: 44px;
+		&--mb-lg {
+			margin-bottom: s(4, m);
+		}
+	}
+
+	&__bill-container {
+		margin-bottom: 21px;
+		padding-left: s(5/2);
+		display: flex;
+		justify-content: space-between;
+
+		@include under(cart) {
+			padding-left: 0;
+		}
+	}
+
+	&__text {
+		@extend %title-sans--secondary;
+		line-height: 150%;
+		letter-spacing: 1px;
+		text-transform: uppercase;
+		
+		&--pad {
+			padding-top: 48px;
+		}
+
+		&-container--info-section {
+			padding-top: s(4,m);
+			//height: 72px + 60px;
+			@include under(cart) {
+				text-align: center;
+				height: auto;
+				padding-top: s(2, m);
+				padding-bottom: s(2, m);
+				&--personal { height: 25px;}
+			}
+		}
+
+		&--ttl {
+			@include under(cart) {
+				display: none;
+			}
+			&--sm {
+				cursor: pointer;
+				@include link-states {
+					color: c(grey);
+				}
+				margin-bottom: 15px;
+				&:last-of-type {margin-bottom: 0;}
+			}
+		}
+		&-price {
+			@extend %paragraph--price;
+			white-space: nowrap;
+
+			@include under(cart-price) {
+				letter-spacing: 2px;
+			}
+		}
+
+		&--ttn {text-transform: none;}
+
+		&-italic {
+			@extend %paragraph--lg;
+			font-family: f(serif);
+			display: block;
+
+			&-uppercase {
+				text-transform: uppercase;
+			}
+		}
+	}
+
+	&__button-container {//no se si se siga usandp, pero mejor hago buttons-container
+		margin-top: 32px;
+		margin-bottom: 24px;
+		display: flex;
+		justify-content: center;
+
+	}
+
+	&__buttons-container {
+		display: flex;
+		justify-content: space-between;
+			 .single__submit-container {
+				margin: 2px;
+			 }
+			 .single__submit-icon {visibility: hidden;}
+			.single__submit-icon--loader {
+				visibility: visible;
+				right:  -30px;
+				svg {
+					* {
+						fill: c()
+					}
+				}
+			}
+	}
+
+	&__bg-img {
+		@include bg-cover(center);
+		margin-bottom: s(2);
+		height: 0;
+				padding-top: 116%;
+				&--full-height {
+					height: 0;
+					padding-top: 140%;
+				}
+	}
+
+	&__event-info {
+		@include center('xy');
+		width: 100%;
+		.shop__ttl--serif--sm:first-of-type {
+			margin-bottom: 3px;
+		}
+
+		&-container {
+			position: relative;
+			height: s(5,m);
+		}
+	}
+
+	&__divisor {
+		margin-bottom: s(3, m);
+	}
+
+	&__scroll-up-container {
+			@include over(cart) {display: none;}
+			position: relative;
+			text-align: center;
+		.icon__scroll-up {
+			@include center('x');
+		}
+	}
+
+	&__logo-regalado {
+		position: absolute;
+		top: -30px;
+		height: 60px;
+		width: 60px;
+		// display: none;
+		svg {
+			background: rgba(255,255,255, 0.4);
+			border-radius: 46%;
+			padding: 4px;
+
+			.st0 {
+				fill: transparent;
+			}
+		}
+	}
+}

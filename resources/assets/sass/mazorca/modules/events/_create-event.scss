@@ -1,0 +1,154 @@
+.create-event {
+		@include form;
+
+		&__row {
+			min-height: calc(100vh - (170px + 95px + 125px));//altura de la bg img, menos footer, herader y offset del form
+		}
+
+		&__container {
+			min-height: 490px;
+		}
+
+		&__title {
+			margin-bottom: s(3, m);
+			font-size: 22px;
+			&--container {
+			}
+		}
+
+		&__p {
+		font-family: f(benton);
+		font-size: 15px;
+		line-height: 22px;
+		margin-bottom: s(4, m);
+		&--mb-sm {
+			margin-bottom: s(2,m);
+		}
+		&--help {
+			color: c(dark-grey);
+			font-size: 11px;
+			font-family: f(benton);
+			line-height: 130%;
+			padding-left: 12px;
+			padding-top: 13px;
+		}
+		}
+
+		&__step {
+			font-family: f(serif);
+			font-size: 19px;
+			margin-bottom: s(3, m);
+			&--small {
+				font-size: 15px;
+			}
+		}
+
+		&__label {
+			font-family: f(benton);
+			font-size: 15px;
+			text-transform: uppercase;
+			margin-bottom: s(3);
+			&--small {
+				font-size: 13px;
+			}
+			&--placeholder {
+				font-size: 13px;
+				text-transform: none;
+				top: 3px;
+				left: 9px;
+				padding-top: 8px;
+				padding-bottom: 3px;
+				width: calc(100% - 28px);
+				position: absolute;
+				color: c(grey);
+				background: c(white);
+				@include under (xs) {
+					font-size: 11px;
+				}
+			}
+		}
+
+	&__input  {
+		&--transparent { background-color: transparent;}
+		&--no-spinners::-webkit-inner-spin-button,
+		&--no-spinners::-webkit-outer-spin-button {
+			-webkit-appearance: none;
+			margin: 0;
+		}
+	}
+
+	&__input-container,
+	&__select-container {
+		padding-left: 20px;
+		input::-webkit-calendar-picker-indicator {
+			opacity: 0;
+			width: 44%;
+			height: 100%;
+			// position: absolute;
+			left: 10px;
+		}
+		input::-webkit-clear-button,
+		input::-webkit-inner-spin-button {
+			position: absolute;
+			right: 25px;
+			z-index: 2;
+		}
+		input::-webkit-clear-button {
+			right: 45px;
+		}
+
+		svg {
+			top: 50%;
+			z-index: -1;
+			path {
+				fill: c();
+			}
+		}
+		&--no-padding-left {
+			padding-left: 0px;
+		}
+	}
+
+	&__select {
+		&-container {
+			position: relative;
+			z-index: 1;
+			background-color: transparent;
+			margin-bottom: s(4, m);
+		}
+	}
+
+	&__flippable-svg {
+		svg {
+			transform: rotate(180deg) translateY(25%) !important;
+		}
+	}
+
+	&__checkbox {
+		position: relative;
+		top: 1px;
+
+		&-container {
+			display: flex;
+			justify-content: space-between;
+			margin-bottom: s(2,m);
+			flex-wrap: wrap;
+		}
+
+		&-label {
+			font-family: f(benton);
+			font-size: 15px;
+			margin-bottom: s(1,m);
+			input[type="radio"].create-event__checkbox--radio {
+				border-radius: 0 !important;
+			}
+		}
+
+	}
+}
+
+/* .unstyled::-webkit-inner-spin-button, */
+.unstyled::-webkit-calendar-picker-indicator {
+	-webkit-appearance: none;
+	color: transparent;
+}

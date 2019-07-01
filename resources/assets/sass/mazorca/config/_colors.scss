@@ -1,0 +1,29 @@
+$colors: (
+	base:	#231F20,
+	white:	#FFFFFF,
+	grey: rgb(167, 167, 167),
+	light-grey: #A7A5A5,
+	mid-grey: #A7A5A6,
+	dark-grey: rgb(88, 89, 91),
+	other-grey: #919396,
+	other-dark-grey: (#535353),
+	light-blue: #91C7B8,
+	light-blue-user-evt: #D3E9E3,
+	light-red-user-evt: #FFB29E,
+	none: transparent,
+	yellow: #FFFDE5,
+	green: #8CC7BB,
+	alerts: #FFFFFF,
+	success: #A7A5A6,
+	error: #A7A5A6,
+	web-gray: #58595B,
+	);
+
+@function c($color:base) {
+	@return map-get($colors, $color);
+}
+
+$colorForeground: c();
+$colorBackground: c(white);
+$colorFeatured: c();
+$colorError: #8A1010;

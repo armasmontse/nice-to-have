@@ -1,0 +1,67 @@
+//_________________________ Config:Fuentes _________________________ \\
+
+/**
+ * Declare fonts using the Mixin
+ */
+//por problemas con la Benton no requerimos la ttf ni la woff
+@mixin declara-font-face-mod($font-family, $font-filename, $font-weight: normal, $font-style: normal, $font-stretch: normal) {
+	@font-face {
+		font-family: '#{$font-family}';
+		src: url('#{$font-filename}.eot');
+    	src: url('#{$font-filename}.eot?#iefix') format('embedded-opentype');
+        src: url('#{$font-filename}.otf') format('opentype');
+        src: url('#{$font-filename}.svg##{$font-filename}') format('svg');
+		src: url('#{$font-filename}.ttf') format('truetype');
+		src: url('#{$font-filename}.woff2') format('woff2');
+        src: url('#{$font-filename}.woff') format('woff');
+		font-weight: $font-weight;
+		font-style: $font-style;
+		font-stretch: $font-stretch;
+	}
+}
+
+
+@include declara-font-face-mod(Bellaboo-Regular, '../fonts/BELLABOO-Regular', normal);
+
+@include declara-font-face-mod(OpenSans, '../fonts/OpenSans-Regular', normal);
+@include declara-font-face-mod(OpenSans, '../fonts/OpenSans-Light', lighter);
+@include declara-font-face-mod(OpenSans, '../fonts/OpenSans-Bold', bold);
+
+@include declara-font-face-mod(Brandon, '../fonts/BrandonGrotesque-Bold', bold);
+
+@include declara-font-face-mod(OpenSans-Light, '../fonts/OpenSans-Light', lighter);
+
+@include declara-font-face-mod(PlayfairDisplay-Black, '../fonts/PlayfairDisplay-Regular', lighter);
+
+@include declara-font-face-mod(Bohemian typewriter, '../fonts/BohemianTypeWriter');
+
+@include declara-font-face-mod(DalaMoaLight, '../fonts/DalaMoa-Light', lighter);
+
+@include declara-font-face-mod(DalaFloda-RomanNo2, '../fonts/DalaFloda-RomanNo2', normal);
+
+@include declara-font-face-mod(Merriweather, '../fonts/Merriweather-Regular', normal);
+
+@include declara-font-face-mod(SerifaRoman, '../fonts/SerifaStd-Roman', normal);
+
+
+/// Refer to font families through mapped variables.
+/// Font families must be written as lists, that is, between parenthesis.
+
+$fonts:(
+		bellaboo: ('Bellaboo-Regular', sans-serif),
+		benton:	('OpenSans', sans-serif),
+		benton-book: ('OpenSans-Light', sans-serif),
+		brandon: ('Brandon', sans-serif),
+		gill: ('OpenSans-Light', serif),
+		serif: 	('PlayfairDisplay-Black', serif),
+		bohemian: 	('Bohemian typewriter', serif),
+		dala-moa: 	('DalaMoaLight', serif),
+		dala-floda: ('DalaFloda-RomanNo2', serif),
+		merri-weather: ('Merriweather', serif),
+		serifa: ('SerifaRoman', serif)
+
+	);
+
+@function f($font) {
+	@return map-get($fonts, $font);
+}

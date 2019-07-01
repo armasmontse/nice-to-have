@@ -1,0 +1,14 @@
+@import "_colors";
+@include reset;
+// Tamaño base. Todos los tamaños se ajustan a esta unidad.
+//
+$base: 25;
+$base-px: 10px;
+$base-porcentaje: percentage($base-px / $row-max-width); // no cambiar
+
+html{font-size: $base-px;}
+
+* {
+	&::selection{ background: lighten(c(grey), 20%); }
+	&::-moz-selection{background: lighten(c(grey), 20%); }
+}

@@ -1,0 +1,36 @@
+.icon {
+	&__caret-right  {
+		svg {
+			* {
+				fill: #A7A5A5;
+			}
+			width: 4px;
+			height: 10px;
+		}
+	}
+	&__scroll-up {
+		right: 30px;
+		bottom: 30px;
+		cursor: pointer;
+		z-index: 99;
+		padding: 3px 2px 2px 3px;
+		display: inline-block;
+		position: fixed;
+		border-radius: 50%;
+		background-color: rgba(255,255,255,0.85);
+		svg {
+			width: 47px;
+			height: 47px;
+			cursor: pointer;
+			overflow: visible;
+			path.st1 {
+				fill: none;
+			}
+			ellipse {
+				fill: none;
+				stroke:none;
+			}
+		}
+	}
+
+}

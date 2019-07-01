@@ -1,0 +1,58 @@
+.users {
+
+    &__container {
+        margin-bottom: s(6);
+
+        &-page-title {
+            margin-top: 85px;
+            margin-bottom: 93px;
+            @include under(sm) {
+                margin-bottom: 30px;
+            }
+        }
+    }
+
+    &__col {
+
+        &-1-2 {
+            @include under(cart) {
+                @include unary-col(100%);
+                @include binary-column-padding($reset: true);
+            }
+
+            &-nested {
+                @include under(sm) {
+                    @include unary-col(100%);
+                    @include binary-column-padding($reset: true);
+                }
+            }
+        }
+    }
+
+    &__box {
+        @include width(440px);
+
+        @include under(cart) {
+            @include width(100%);
+        }
+
+        &-left {
+            padding-right: s(5/2);
+            margin-bottom: 97px;
+
+            @include under(cart) {
+                padding-right: 0;
+                margin-bottom: s(10);
+            }
+        }
+
+        &-right {
+            padding-left: s(5/2);
+
+            @include under(cart) {
+                padding-left: 0;
+                margin-bottom: 177px;
+            }
+        }
+    }
+}

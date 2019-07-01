@@ -1,0 +1,160 @@
+.modal {
+	&__overlay {
+		background-color: transparentize(c(white), 0.5);
+		padding-left: s();
+		padding-right: s();
+
+		position: fixed;
+		top: 0;
+		left: 0;
+		z-index: 200;
+
+		width: 100%;
+		min-height: 100%;
+		height: 100vh;
+	}
+
+	&__container {
+		@include center('xy');
+		background-color: c(white);
+		border: 1px solid c(grey);
+		max-width: 800px;
+		width: calc(100% - #{s(2)});
+		min-height: 470px;
+		max-height: 500px;
+		height: 100%;
+		padding-top: 60px;
+		padding-bottom: 60px;
+		padding-left: 40px;
+		padding-right: 40px;
+		@include under(sm) {
+			height: auto; max-height: 100%;
+			padding: 40px;
+			overflow: auto;
+		}
+
+		&--xs {
+			height: 170px;
+			min-height: 170px;
+			padding-top: 45px;
+			padding-bottom: 45px;
+		}
+
+		&--sm {
+			height: 230px;
+			min-height: 230px;
+			padding-top: 55px;
+			padding-bottom: 55px;
+		}
+
+		&--activated-event,
+		&--close-event {
+			max-width: 700px;
+			min-height: 300px;
+			height: 300px;
+		}
+
+		&--published-event {
+			max-width: 700px;
+			min-height: 230px;
+			height: 230px;
+		}
+	}
+
+	&__col-1-2 {
+		@include binary-column-maker(260,  430,  22px,  690);
+		@include under(sm) {
+			width: 100%;
+			&:nth-of-type(odd) {
+				margin-bottom: 20px;
+			}
+			img {
+				height: auto;
+				margin: 0 auto;
+				display: block;
+				max-width: 300px;
+			}
+		}
+		&--lg {
+			.single__info-box {
+				max-height: 240px;
+				height: 100%;
+				overflow: auto;
+				@include under(sm) {
+					height: auto;
+					max-height: none;
+				}
+			}
+		}
+	}
+
+	&__product-info {
+		&-data {
+		}
+		&-container {
+			max-width: 690px;
+			width: 100%;
+			margin-bottom: 30px;
+			@include under(sm) {
+				padding: 0;
+			}
+		}
+	}
+
+	&__actions-container {
+		max-width: 336px;
+		width: 100%;
+		margin-right: auto;
+		margin-left: auto;
+		display: flex;
+		justify-content: space-between;
+		@include under(sm) {
+			display: block;
+			text-align: center;
+		}
+
+		&--no-db {
+			@include under(sm) {
+				display: flex;
+			}
+		}
+
+		&--centered {
+			justify-content: center;
+		}
+	}
+
+	&__close {
+		top: s(2);
+		right: s(2);
+		cursor: pointer;
+		position: absolute;
+		@include under(sm) {
+			top: s(3/2);
+			right: s(3/2);
+		}
+		svg {
+			height: 20px;
+			width: 20px;
+		}
+	}
+
+	&__message {
+		font-family: f(serif);
+		font-size: 14px;
+		text-align: center;
+		line-height: 21px;
+		margin-bottom: 50px;
+		&--mb-sm { margin-bottom: s(1,m);}
+		&--mb-md { margin-bottom: s(2,m);}
+	}
+
+	&__product-img {
+		@include over(sm) {
+			max-height: 241px;
+			width: 100%;
+			object-fit: contain;
+		}
+	}
+
+}

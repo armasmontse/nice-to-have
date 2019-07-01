@@ -1,0 +1,61 @@
+/*
+* Base structure
+*/
+
+/* Move down content because we have a fixed navbar that is 50px tall */
+body {
+    padding-top: 50px;
+}
+
+html, body {
+    height: 100%;
+}
+
+/*
+* Main content
+*/
+
+.content {
+    min-height: 84.5vh;
+    height: 100%;
+    padding: 20px;
+    position: relative;
+    top: 0px !important;
+
+    &__header-title {
+        @extend .text__title;
+        margin-top: 0;
+        margin-bottom: 50px;
+    }
+
+    &__sub-header {
+        padding-bottom: 10px;
+        border-bottom: 1px solid #eee;
+    }
+
+}
+
+@media (min-width: 768px) {
+    .content {
+        padding-right: 40px;
+        padding-left: 40px;
+    }
+}
+
+// Temporal
+
+.placeholders {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.placeholders h4 {
+    margin-bottom: 0;
+}
+.placeholder {
+    margin-bottom: 20px;
+}
+.placeholder img {
+    display: inline-block;
+    border-radius: 50%;
+}

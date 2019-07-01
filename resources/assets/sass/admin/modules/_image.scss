@@ -1,0 +1,275 @@
+%icon-camera,
+.icon-camera {
+    font-size: 46px;
+    color: white;
+    cursor: pointer;
+}
+
+%icon-camera-blue,
+.icon-camera-blue {
+    @extend %icon-camera;
+    color: blue;
+}
+
+%icon-camera-white--text,
+.icon-camera-white--text {
+    @extend %icon-camera;
+    font-family: f(sans);
+    font-size: 11px;
+    color: white;
+    line-height: 1.5;
+    text-decoration: underline;
+    display: block;
+}
+
+%icon-camera-blue--text,
+.icon-camera-blue--text {
+    @extend %icon-camera-white--text;
+    color: blue;
+}
+
+
+%icon-plus,
+.icon-plus {
+    @extend %icon-camera-blue;
+}
+
+%icon-text-plus,
+.icon-text-plus {
+    @extend %icon-camera-blue--text;
+    padding-left: 0px !important;
+}
+
+%icon-arrows,
+.icon-arrows {
+    font-size: 12px;
+    color: gray;
+    cursor: pointer;
+}
+
+%icon-arrows-white,
+.icon-arrows-white {
+    @extend %icon-arrows;
+    color: white;
+}
+
+%icon-arrows-white--text,
+.icon-arrows-white--text {
+    font-size: 11px;
+    font-weight: normal;
+    color: white;
+    line-height: 1.5;
+    text-decoration: underline;
+    display: block;
+}
+
+
+.image {
+    display: block;
+
+    &__inline-block-container {
+        display: inline-block;
+        position: relative;
+
+        .image__overlay {
+            display: flex;
+        }
+    }
+
+    &--main {
+        @include aspect-ratio(4, 2);
+    }
+
+    &--home-vertical {
+        @include aspect-ratio(3, 4);
+    }
+
+    &--single {
+        @include aspect-ratio(2, 5);
+    }
+
+    &--multi-image {
+        margin-bottom: s(3);
+    }
+
+    &--campaign {
+        @include aspect-ratio(4, 3);
+    }
+
+    &--product-photos {
+        .image__inline-block-container {
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+
+    &--seo {
+        @include aspect-ratio(2, 1);
+    }
+
+    &__overlay {
+        @include overlay(transparentize(blue, 0.5), true);
+        z-index: 99;
+    }
+
+    &__col {
+
+        &--main {
+            @extend .col-xs-4;
+        }
+
+        &--home-vertical {
+            @extend .col-xs-3;
+            padding-left: 0;
+        }
+
+        &--single,
+        &--multi-image,
+        &--campaign {
+            @extend .col-xs-5;
+            padding:0;
+            // @include chiralOddEven(padding, 20px);
+        }
+
+
+        &--single,
+        &--multi-image {
+            &:nth-child(2n+1) {
+                clear: left;
+            }
+        }
+
+        &--seo {
+            @extend .col-xs-2;
+        }
+    }
+
+    &__placeholder{
+        width: 100%;
+        height: 100px;
+        &--single {
+        }
+    }
+
+    &__icon-container {
+        @include center('xy');
+    }
+
+    &__icon-camera-blue {
+        @extend %icon-camera-blue;
+    }
+
+    &__background--related-garments {
+        &-container {
+            height: 100px;
+        }
+
+        height: 100%;
+        width: 100%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    &--related-garments {
+    }
+}
+
+.image__col {
+
+    .image__icon-container {
+        @include center('xy');
+    }
+
+	.image__icon {
+        @extend %icon-arrows;
+		&:before{
+			content: '\f047';
+		}
+	}
+
+    .image__icon-text {
+        @extend %icon-camera-white--text;
+    }
+
+	&.camera-blue {
+
+		.image__overlay {
+            background-color: transparent;
+            z-index: 1;
+		}
+
+		.image__icon {
+			@extend %icon-camera-blue;
+			&:before{
+				content: '\f030';
+			}
+		}
+
+        .image__icon-text {
+            @extend %icon-camera-blue--text;
+        }
+	}
+
+	&.camera-white {
+
+		.image__icon {
+			@extend %icon-camera;
+			&:before{
+				content: '\f030';
+			}
+		}
+	}
+
+    &.just-text {
+        .image__icon {
+			display: none;
+		}
+
+        .image__icon-text {
+            @extend %icon-camera-white--text;
+            padding: 0;
+        }
+    }
+
+    &.arrows {
+        .image__overlay {
+            background-color: transparent;
+            opacity: 1;
+            z-index: 1;
+            border: 1px dashed c(gray);
+        }
+
+        &.image__icon {
+            @extend %icon-arrows;
+            // &:before {
+            //     content: '\f047' !important;
+            // }
+        }
+
+        .image__icon-text {
+            display: none;
+        }
+
+        img {
+            opacity: 0;
+        }
+    }
+
+    &.arrows-white {
+        .image__overlay {
+            border: 0;
+        }
+
+        &.image__icon {
+            @extend %icon-arrows-white;
+            // &:before {
+            //     content: '\f047';
+            // }
+        }
+
+        .image__icon-text {
+            @extend %icon-arrows-white--text;
+        }
+    }
+}

@@ -1,0 +1,361 @@
+@import "_home.grid";
+.home {
+    &__body {
+        position: relative;
+        .header {
+            position: absolute;
+            top: 30px;
+            width: 100%;
+            z-index: 2;
+            background-color: rgba(255,255,255,0.5);
+            &__logo  {
+                padding-top: 30px;
+            }
+            .menuMain {
+                transition: all 0.3s ease;
+                background-color: transparent;
+                &.sticky {
+                    background-color: #fff;
+                }
+            }
+        }
+    }
+    &__intro {
+        padding:150px 0;
+        background-size: cover;
+        background-color: c(light-grey);
+        background-position: center;
+        @include under(sm) {
+            padding: 135px 0 25px 0;
+        }
+    }
+    &__container {
+        margin-bottom: s(6);
+        &--contacto {
+            padding-top: 130px;
+        }
+        @include under(xs) {
+            margin-bottom: 68px;
+        }
+    }
+
+    &__col {
+        margin-bottom: s(6);
+    }
+
+    &__box {
+        &-left {
+            padding-left: s(5/2);
+        }
+
+        &-right {
+            padding-right: s(5/2);
+        }
+    }
+
+    &__text {
+        @extend %title-sans;
+        letter-spacing: s();
+        text-align: center;
+
+        &--subtitle,
+        &--data {
+            @extend %title-sans--secondary ;
+            &-block {
+                padding-top: 7px;
+                display: block;
+            }
+
+            &-block-hira {
+                @extend %paragraph;
+                font-family: f(serif);
+                display: block;
+            }
+
+            &-status {
+                font-weight: lighter;
+                color: c(mid-grey);
+            }
+        }
+
+        &--subtitle {
+            letter-spacing: 1px;
+        }
+
+        &--data {
+            text-transform: none;
+        }
+    }
+
+    &__title-container {
+        margin-bottom: 18px;
+
+        @include under(xs) {
+            text-align: center;
+        }
+
+        &--md {
+            margin-bottom: 26px;
+            @include under(xs) {
+                text-align: center;
+            }
+        }
+
+        &--lg {
+            margin-bottom: s(5);
+            @include under(xs) {
+                text-align: center;
+            }
+        }
+    }
+
+    &__profile-container {
+        margin-bottom: s(10);
+        text-align: center;
+    }
+
+    &__user-container {
+        margin-bottom: s(3);
+
+        @include under(xs) {
+            text-align: center;
+        }
+
+        &--lg {
+            margin-bottom: s(4);
+        }
+    }
+
+    &__input-container {
+        padding-left: s(2);
+        margin-bottom: s(4);
+
+        @include under(xs) {
+            width: calc(100% - 100px);
+            margin-right: auto;
+            margin-left: auto;
+            padding-left: 0;
+        }
+    }
+
+    &__payment-child-container {
+        margin-bottom: s();
+        padding-left: s(2);
+        display: flex;
+        justify-content: space-between;
+
+        @include under(xs) {
+            width: calc(100% - 100px);
+            margin-right: auto;
+            margin-left: auto;
+            padding-left: 0;
+        }
+
+        &:nth-last-of-type(3n+2) {
+            margin-bottom: s(4);
+        }
+    }
+
+    &__submit-container {
+        margin-bottom: s(4);
+        display: flex;
+        justify-content: center;
+    }
+
+    &__event-name-container,
+    &__general-info-container {
+        margin-bottom: 11px;
+    }
+
+    &__status-container {
+        margin-bottom: s(3/2);
+    }
+
+    &__link-container {
+        margin-bottom: 31px;
+    }
+
+    &__link {
+        @extend %link-underline;
+        &--capital-letter {
+            text-transform: uppercase;
+        }
+    }
+
+    &__slider {
+        display: inline-block;
+        width: 100%;
+        min-height: 373px;
+        @include between(xs, slider_2) {
+            padding: 0 50px;
+        }
+    }
+
+    &__slider-nav {
+	    transform: translateY(-50%);
+		font-size: 50px;
+	    &--next {right: -5px;}
+	    &--prev {left: 4px;}
+	}
+
+    &__image {
+        height: 100%;
+		width: 100%;
+        @include bg-cover();
+    }
+
+    &__contacto-buttons-container,
+    &__cta-buttons-container {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: s(2, m);
+
+        &--small {
+            height: auto;
+            max-width: 446px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 0;
+            @include over(xs) {
+                .input__submit {margin-bottom: 0;}
+            }
+        }
+        //Quitar cuando se puedan crear eventos
+        &-hide-text { display: none; }
+
+        & > a:hover {
+            .home__cta-buttons-container-show-text { display: none; }
+            .home__cta-buttons-container-hide-text { display: inline; }
+        }
+    }
+
+    &__cta-buttons-container {
+        @include under(350px) {
+            flex-direction: column;
+        }
+    }
+
+    &__cta-button {
+        @include under(350px) {
+            text-align: center;
+        }
+    }
+
+    &__contacto-buttons-container {
+        margin-top: 20px;
+        justify-content: center;
+    }
+    &__ttl {
+        @extend %title-serif--lg;
+
+        &--cta {
+            font-size: 25px;
+            @include under(sm) {
+                font-size: 24px;
+            }
+        }
+
+        &--less {
+            font-size: 19px !important;
+        }
+
+        &--contact {
+            @extend %title-sans;
+            font-size: 24px;
+            letter-spacing: 10px;
+            margin-bottom: s(3, m);
+            &--small {
+                font-size: 20px;
+            }
+            @include under(408px) {
+                position: relative;
+                left: calc(50% - 137px);
+            }
+        }
+        &--steps {
+            @extend %title-serif--xl;
+            margin-bottom: 15px;
+
+            @include under(sm) {
+                font-size: 62px;
+            }
+
+            @include under(xs) {
+                font-size: 46px;
+                white-space: normal;
+            }
+
+            &--small {
+                font-size: 55px !important;
+                @include under(sm) {
+                    font-size: 46px;
+                }
+            }
+
+            &--number {
+                @extend %title-sans;
+                margin-bottom: 17px;
+                letter-spacing: 7px;
+                &--small {
+                    font-size: 21px !important;
+                }
+            }
+        }
+    }
+    &__p {
+        &--steps p,
+        &--steps b,
+        &--steps ul,
+        &--steps ol,
+        &--steps div,
+        &--steps strong,
+        &--steps {
+            @extend %paragraph--lg;
+            font-size: 22px;
+            // margin-bottom: 15px;
+            &:last-of-type { margin-bottom: 0};
+        }
+        &--contact {
+            margin-bottom: s(5, m);
+           & p, & a {
+                font-family: f(benton);
+                font-weight: lighter;
+                font-size: 15px;
+                line-height: 1.5;
+           }
+           &--small {
+               font-size: 16px;
+           }
+        }
+    }
+
+    &__divisor {
+        &--steps {
+            max-width: 435px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 22px;
+        }
+    }
+
+    &__contacto-checkboxes-container {
+        justify-content: space-between;
+        max-width: 335px;
+        margin: 0 auto;
+        margin-bottom: s(2, m);
+        padding-top: s(2, m);
+    }
+
+    &--different-mb {
+        margin-bottom: 100px;
+        width: 100%;
+        max-width: 700px;
+        height: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+.wysiwyg .home__p--steps {
+    font-size: 24px;
+}

@@ -1,0 +1,18 @@
+$z: (
+	base: 0,
+	under-base: -1,
+	unary: 1,
+	menu-main-sticky: 3,
+	sobre-menu-sticky: 5,
+	menuMobil: 100,
+	menuMobil-level0: 990,
+	menuMobil-level1: 999,
+	menuMobil-level2: 1009,
+	);
+
+
+@function z($z-index: base) {
+	@if map-has-key($z, $z-index) {
+		@return map-get($z, $z-index);
+	}
+}

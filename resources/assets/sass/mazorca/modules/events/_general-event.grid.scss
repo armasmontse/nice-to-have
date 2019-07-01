@@ -1,0 +1,18 @@
+.general-event {
+    &__col {
+        &-1-2 {
+            &:nth-of-type(even) {
+                display: flex;
+                justify-content: flex-end;
+            }
+        }
+    }
+
+    &__box {
+        @include width(417px);
+        
+        @include under(xs) {
+            @include width(100%);
+        }
+    }
+}

@@ -1,0 +1,120 @@
+.splash {
+	&__body {
+		position: relative;
+		.header {
+			position: absolute;
+			top: 30px;
+			width: 100%;
+			z-index: 2;
+			background-color: rgba(255,255,255,0.75);
+			&__logo  {
+				padding-top: 30px;
+			}
+			.menuMain {
+				transition: all 0.5s ease;
+				background-color: transparent;
+				&.sticky {
+					background-color: #fff;
+				}
+			}
+		}
+	}
+	&__row {
+		&-container {
+			//height: calc(100vh - 290px);//height del footer
+			display: flex;
+		}
+		padding-top: 200px + 180px; //el segundo número es el offset de las boxes en el diseño
+		padding-bottom: 200px;
+		@include under(splash) {
+			padding-top: (214px/2) + 171px;//el segundo número es el offset de las boxes en el diseño
+			padding-bottom: (259px/2);
+		}
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center;
+	}
+	&__box {
+		background-color: c(white);
+		max-width: 417px;
+		min-height: 270px;
+		height: 100%;
+		padding-top: 30px;
+		padding-bottom: 30px;
+		padding-left: 24px;
+		padding-right: 24px;
+		&--right {
+			margin-left: auto;
+			margin-right: 0;
+		}
+	}
+
+	&__col-1-2 {
+		@include under(splash) {
+			@include unary-col(417px);
+			@include binary-column-padding($reset: true);
+			margin-bottom: s(2);
+		}
+	}
+
+	&__ttl {
+		font-family: f(serif);
+		font-size: 31px;
+		font-weight: lighter;
+		text-align: center;
+		margin-bottom: 20px;
+	}
+
+	&__p {
+		font-family: f(benton);
+		font-size: 17px;
+		line-height: 22px;
+		text-align: center;
+		margin-bottom: 38px;
+		&--small {
+			font-size: 16px !important;
+		}
+	}
+
+	&__button {
+		@extend .input__submit;
+		padding-left: 28px;
+		@include under(xs) {
+			display: inline-block;
+			margin-left: auto;
+			margin-right: auto;
+			min-width: 175px;
+		}
+		&-main-container {//para todos los botones de un box
+			display: flex;
+			justify-content: space-around;
+			@include under(xs) {
+				flex-direction: column;
+			}
+		}
+
+		&-container {/*para un solo boton*/
+			@include under(xs) {
+				text-align: center;
+				margin-bottom: s(1.5);
+			}
+		}
+
+		&-arrow {
+			@include center('y');
+			left: 14px;
+			svg {
+				height: 8px;
+				width: 8px;
+			}
+		}
+		&:hover {
+			border-color: c(white);
+			.st0 {
+				fill: c(base);
+				stroke: c(white);
+			}
+		}
+	}
+
+}

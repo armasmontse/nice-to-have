@@ -1,0 +1,19 @@
+<?php
+
+namespace DummyNamespace;
+
+use App\Http\Binds\CltvoBind;
+
+use Route;
+
+class DummyClass extends CltvoBind
+{
+
+    /**
+     * bind methods
+     */
+    public static function Bind(){
+
+    }
+
+}

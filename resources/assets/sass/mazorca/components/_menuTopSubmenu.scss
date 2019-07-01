@@ -1,0 +1,22 @@
+@mixin menuTopSubmenu {
+    &__link {
+        @extend %link-menu;
+        font-size: 13px;
+        position: relative;
+        color: c(white);
+        margin-bottom: 18px;
+        &-container {
+            position: absolute;
+            padding-left: 5px;
+            left: -5px;
+            padding-top: 18px;
+            width: 117px;
+            background-color: c();
+        }
+    }
+
+    &__dash {
+        position: absolute;
+        top: -26px;
+    }
+}

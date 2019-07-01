@@ -1,0 +1,56 @@
+.info-section {
+	width: 100%;
+	&__container {
+		padding-top: s(1, lg);
+		padding-bottom: s(1, lg);
+	}
+
+	&__col {
+
+		&-1-1 {
+			@include width(564px);
+		}
+	}
+
+	&__ttl {
+		@extend %title-sans;
+		margin-bottom: s(1, info-secion-ttl);
+		text-align: center;
+		letter-spacing: 4px;
+        line-height: 2;
+
+		&-italic {
+			@extend .info-section__ttl;
+			font-family: f(serif);
+			font-size: 31px;
+			text-transform: none;
+			letter-spacing: 1px;
+		}
+	}
+
+	&__p {
+		@extend %paragraph--lg;
+		//text-align-last: center;
+		text-align: center;
+		&--small {
+			font-size: 16px;
+		}
+	}
+
+	&__link {
+		@extend .transition-fast;
+		@extend %paragraph--price;
+		letter-spacing: 2px;
+		text-transform: uppercase;
+		line-height: 36px;
+		@include link-states {
+			color: c(grey);
+		}
+		&-container {
+			margin-left: auto;
+			margin-right: auto;
+			display: flex;
+			justify-content: center;
+		}
+	}
+}

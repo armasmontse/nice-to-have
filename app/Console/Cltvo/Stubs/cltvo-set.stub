@@ -1,0 +1,38 @@
+<?php
+
+namespace DummyNamespace;
+
+use App\Console\Cltvo\Sets\CltvoSet;
+use Illuminate\Console\Command;
+
+class DummyClass extends CltvoSet
+{
+    /**
+     * Etiqueta a desplegarse par ainformar final
+     */
+    protected $label =  "";
+
+    /**
+     * etiqueta del display del modelo
+     * @var string
+     */
+    protected $model_label =  "label";
+
+
+    /**
+     * nombre de la clase a ser sembrada
+     */
+    protected function CltvoGetModelClass(){
+        return "";
+    }
+
+    /**
+     * valores a ser introducidos en la base
+     */
+    protected function CltvoGetItems(){
+        return [
+
+        ];
+    }
+
+}

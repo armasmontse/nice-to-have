@@ -1,0 +1,12 @@
+/node_modules
+/public/storage
+/vendor
+/.idea
+Homestead.json
+Homestead.yaml
+.env
+resources/assets/js/node_modules/
+!resources/assets/sass/node_modules/
+resources/assets/sass/.sass-cache/
+/tests/js/node_modules
+*.DS_Store

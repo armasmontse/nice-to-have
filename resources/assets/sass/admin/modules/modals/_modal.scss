@@ -1,0 +1,40 @@
+.modal {
+
+    &__dialog {
+        top: 29px;
+    }
+
+    &__close {
+        font-family: f(sans);
+        font-size: 16px;
+        text-transform: uppercase;
+        opacity: 1;
+    }
+
+    &__page-header {
+        @extend .page-header;
+        margin: 0;
+    }
+
+    &__footer-logo {
+
+        svg {
+		    width: 100px;
+			.st0{fill:#312822;}
+		}
+    }
+
+    &__row-title {
+        margin-bottom: 50px;
+        padding-top: 15px;
+    }
+
+    &__row-footer {
+        margin-bottom: 5px;
+    }
+
+    &__scroll {
+        max-height: 100%;
+        overflow-y: auto;
+    }
+}

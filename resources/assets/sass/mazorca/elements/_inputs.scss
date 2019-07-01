@@ -1,0 +1,16 @@
+%input
+{
+    height: 30px;
+    font-family: f(benton);
+    font-size: 14px;
+    width: 100%;
+    margin-bottom: s(1, input);
+    -webkit-box-shadow: none !important;
+    -moz-box-shadow: none !important;
+    box-shadow: none !important;
+    outline: none;
+
+    &:last-of-type {
+        margin-bottom: 0;
+    }
+}

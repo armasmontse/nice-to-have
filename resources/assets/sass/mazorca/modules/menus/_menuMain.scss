@@ -1,0 +1,27 @@
+.menuMain {
+	background-color: c(white);
+	padding: 20px;
+	@include under(sm) {display: none;}
+	&.sticky {
+		top: 30px;
+		left: 0;
+		width: 100%;
+		z-index: z(menu-main-sticky);
+		position: fixed;
+		box-shadow: 0 0 7px rgba(0,0,0,0.2);
+		@include ease-transition;
+	}
+
+	&__link {
+		color: #000;
+		//text-shadow: 0 0 10px rgba(255,255,255,1);
+		&-container {
+			display: flex;
+			justify-content: space-around;
+			max-width: 780px;
+			margin-right: auto;
+			margin-left: auto;
+		}
+		@extend %link-menu;
+	}
+}

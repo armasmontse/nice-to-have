@@ -1,0 +1,255 @@
+@import "_shop.grid";//porque el grid ya era demasiado grande
+.shop {
+
+	padding-top: 6px;
+
+	&__filter {
+		&-group {
+			max-width: 269px;
+		}
+	}
+	&__section {
+		&--filters {
+			@include under(sm) {display: none;}
+			&--responsive {
+				display: none;
+				margin-bottom: s(2, m);
+				@include sidebar-padding;
+				@include under(sm) {display: block;}
+			}
+		}
+	}
+//variaciones
+	&__home,
+	&__index {
+		margin-bottom: s(1, lg) - s(2, m);
+	}
+
+	&__subttl {
+		@extend %title-sans--sm;
+		text-align: center;
+		letter-spacing: 4px;
+		margin-bottom: s(1, m);
+	}
+
+	&__p {
+		@extend %paragraph;
+		text-align: center;
+	}
+
+	&__bg-img {
+		height: 100%;
+		min-height: inherit;
+		width: 100%;
+		@include bg-cover(center);
+		display: flex;
+		align-items: center;
+		&:hover {
+			.shop__ttl--featured-container {
+				opacity: 1;
+			}
+		}
+	}
+
+	&__ttl {
+		@extend %title-sans;
+		letter-spacing: 4px;
+		&--small {
+			font-size: 20px;
+		}
+		&--sidebar {
+			position: relative;
+			margin-top: s(4);
+			margin-bottom: s(1);
+			padding-left: s(2);
+			//@include sidebar-padding;
+			&-btn {
+				cursor: pointer;
+			}
+		}
+		&--filter {
+			&--small {
+				font-size: 12px;
+			}
+			font-size: 14px;
+			padding-left: s(2, m);
+			padding-right: s(3, m);
+			margin-bottom: 20px;
+			position: relative;
+			cursor: pointer;
+			width: 100%;
+			max-width: 100%;
+			word-break: break-word;
+			.input__select-arrow {
+				top: 5px;
+				right: 11px !important;
+				.st0 {
+					fill: c();
+				}
+			}
+			&-clear {
+				right: 5px;
+				cursor: pointer;
+				position: absolute;
+				font-size: 13px;
+			}
+		}
+		&--serif {
+			@extend %title-serif;
+			font-size: 27px;
+				@include under(md) { font-size: 20px;}
+			text-align: center;
+			margin-bottom: s(2, m);
+			&--sm {
+				@extend %title-serif;
+				@include sidebar-padding;
+				font-size: 15px;
+				&:last-child {
+					margin-bottom: s(2,m);
+				}
+			}
+		}
+		&--featured {
+			&-container {
+				@extend .transition-slow;
+				opacity: 0;
+				background-color: transparentize( c(white), 0.5);
+				height: 115px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				width: 100%;
+
+				@include under(md) {
+					text-align: center;
+				}
+			}
+		}
+	}
+
+	&__submit {
+		color: c(white);
+		background-color: c();
+		&:hover {
+			color: c();
+			background-color: c(white);
+		}
+		&-container {
+			padding-top: s(1.5, m);
+			padding-bottom: s(1.5, m);
+			padding-left: s(2, m);
+		}
+	}
+
+	&__link-event,
+	&__checkbox-container {
+		padding-left: s(4, m);
+	}
+
+	&__link {
+		&-event {
+			@extend %link;
+			display: block;
+			color: c(grey);
+			letter-spacing: 2px;
+			@include link-states {
+				color: c();
+			}
+			padding-top: s(1, m);
+			padding-bottom: s(1, m);
+			&:last-child {
+				margin-bottom: (s(1,md) - s(1, m));
+			}
+		}
+		&-button {
+			@extend %link;
+			@include sidebar-padding;
+			display: inline-block;
+			font-size: 12px;
+			text-decoration: underline;
+			margin-bottom: s(1, md);
+		}
+	}
+
+
+	&__checkbox {
+		height: 15px !important;
+		width: 15px !important;
+		&-label {
+			top: 4px;
+			font-size: 16px;
+			left: 3%;
+			&--todos {
+				text-transform: uppercase;
+				@include link-states {
+					color: c();
+				}
+			}
+		}
+		&-container{
+			margin-bottom: s(1, m);
+			&:last-of-type {
+				margin-bottom: s(1,md);
+			}
+		}
+	}
+
+	&__clear-filters {
+		position: absolute;
+		font-family: f(gill);
+		font-size: 12px;
+		top: 0;
+		right: 0;
+		cursor: pointer;
+		@include link-states {
+			color: c(grey);
+		}
+	}
+
+	&__searchbar-container {
+		margin-bottom: s(4, m);
+		max-width: 269px;
+		@include sidebar-padding;
+		@include under(sm) {display: none;}
+	}
+
+	&__divisor {
+		margin-bottom: s(2, m);
+		&--sm {
+			margin-bottom: s(1/2,md);
+			max-width: 270px;
+			margin-left: auto;
+			margin-right: 0;
+		}
+	}
+
+	&__price-range {
+		&-input {
+			width: calc(50% - 2.5px);
+			margin-bottom: 0;
+			&-container {
+				display: flex;
+				justify-content:space-between;
+				flex-wrap: no-wrap;
+				margin-bottom: s(2);
+				padding-left: s(4, m);
+			}
+		}
+
+		&-separator {
+			text-align: center;
+			align-self: center;
+			line-height: 1.5;
+			width: 40px;
+		}
+	}
+
+	&__button {
+		background-color: c();
+		color: c(white);
+		@include link-states {
+			color: c();
+			background-color: c(white);
+		}
+	}
+}

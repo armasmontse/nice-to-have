@@ -1,0 +1,51 @@
+.paragraph ,
+%paragraph
+{
+    color: c();
+    font-family: f(benton);
+    font-size: 15px;
+    font-weight: lighter;
+    line-height: 150%;
+}
+
+.paragraph--lg ,
+%paragraph--lg
+{
+    @extend %paragraph;
+    font-size: 17px;
+}
+
+.paragraph--price ,
+%paragraph--price
+{
+    @extend %paragraph;
+    font-family: f(gill);
+    font-size: 12px;
+    letter-spacing:7px;
+    line-height: 1.3;
+}
+
+.paragraph-bohemian,
+%paragraph-bohemian {
+    @extend %paragraph;
+    font-family: f(bohemian);
+    font-size: 14px;
+    line-height: 17px;
+}
+
+.paragraph-medium,
+%paragraph-medium {
+    @extend %paragraph-bohemian;
+    font-family: f(benton);
+    font-weight: bold;
+    line-height: 18px;
+    letter-spacing: .7px;
+}
+.register {
+    &--copy {
+        color: c(grey);
+        font-size: 12px;
+        font-family: f(benton);
+        margin-bottom: s(2);
+    }
+}

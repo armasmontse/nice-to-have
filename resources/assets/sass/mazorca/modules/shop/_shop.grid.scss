@@ -1,0 +1,116 @@
+.shop {
+	&__container,
+	&__col {//col--flex se agrega porque Safari es estupido y no hereda correctamente el height a los divs dentro de un objeto flex
+		&--h-500 {
+			min-height: 500px;
+		}
+		&--h-450 {
+			min-height: 450px;
+		}
+		&--h-330 {
+			min-height: 330px;
+		}
+		&--h-300 {
+			min-height: 300px;
+		}
+	}
+
+	.grid__pad-for-3 {
+		@include under(xs) {
+			&:nth-of-type(3n - 2) {padding: 0;}
+			&:nth-of-type(3n - 1) {padding: 0;}
+			&:nth-of-type(3n) {padding: 0;}
+		}
+	}
+
+	.grid__pad-for-2 {
+		@include under(xs) {
+			&:nth-of-type(even) {padding: 0;}
+			&:nth-of-type(odd) {padding: 0;}
+		}
+ 	}
+
+	&__flex-subcontainer {
+		display: flex;
+		width: 100%;
+		@include under(sm) {
+			flex-wrap: wrap;
+		}
+	}
+
+	&__col {//shop__col--static, shop__col--flex
+		margin-bottom: s(2, m);
+		@include flex-static-col-with-adaptable-cols(275px);//static tiene un width de 275px
+		&--flex,
+		&--static {
+			@include under(sm) {
+				flex-basis: auto;
+				width: 50%;
+			}
+		}
+		&--static {
+			display: flex;
+		}
+		&--h-300 {
+			@include between(xs, sm) {
+				flex-basis: auto;
+				&:nth-of-type(1),
+				&:nth-of-type(2) {
+					width: 50%;
+					padding: 0;
+				}
+				&:nth-of-type(1) { padding-right: s(1/2, gutter);}
+				&:nth-of-type(2) { padding-left: s(1/2, gutter);}
+				&:nth-of-type(3) {
+					width: 100%;
+					padding: 0;
+				}
+			}
+
+			@include under(xs) {
+				width: 100%;
+			}
+		}
+		&--xs {
+			@include under(xs) {
+					width: 100%;
+					padding: 0;
+			}
+		}
+	}
+	&__box {
+		display: flex;
+		@extend .transition-slow;
+		outline: 1px solid transparent;
+		@include link-states {
+			outline: 1px solid c();
+		}
+		@include over(sm) {
+			padding-left: s(2,m);
+			padding-right: s(2,m);
+		}
+		&-content {
+			align-self: center;
+			padding-left: s(1/4, gutter);
+			padding-right: s(1/4, gutter);
+		}
+	}
+	&__main {
+		@include main-padding;
+		@include under(sm) {
+			width: 100%;
+		}
+	}
+
+	&__sidebar {
+		@include under (sm) {
+			width: 100%;
+			padding-right: 24px;
+			text-align: center;
+		}
+		&-section {
+			display: flex;
+			flex-direction: column;
+		}
+	}
+}

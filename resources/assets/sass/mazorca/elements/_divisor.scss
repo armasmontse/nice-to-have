@@ -1,0 +1,15 @@
+
+.divisor,
+%divisor
+{
+	width: 100%;
+	border-bottom: 1px solid c(grey);
+	// @include under(sm) {
+	// 	padding-top: 22px;
+	// }
+}
+
+.divisor-checkout {
+	@extend %divisor;
+	margin-bottom: 40px;
+}

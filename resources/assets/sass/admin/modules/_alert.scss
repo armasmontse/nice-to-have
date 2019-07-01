@@ -1,0 +1,26 @@
+.alerts {
+    &__container  {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 999999;
+        font-family: f(serif);
+    }
+
+    &--center-text {
+    	text-align: center;
+    }
+
+    &__success {
+        border-bottom: 2px solid c(success);
+        background-color: #D3E9E3;
+        color: #231F20;
+    }
+
+    &__danger {
+        border-bottom: 2px solid c(error);
+        background-color: #FFB29E;
+        color: #231F20;
+    }
+}

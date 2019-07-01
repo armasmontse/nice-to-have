@@ -1,0 +1,121 @@
+@mixin checkout-grid{
+    &__container {
+        margin-top: s(10);
+
+        &-mb {
+            margin-bottom: s(10);
+        }
+    }
+
+    &__col-1-2 {
+        &:nth-of-type(odd) {
+            display: block;
+        }
+
+        &:nth-of-type(even) {
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        @include under(cart) {
+            @include unary-col(100%);
+            @include binary-column-padding($reset: true);
+        }
+
+
+        &-uneven {
+            @include under(cart) {
+                @include unary-col(100%);
+                @include binary-column-padding($reset: true);
+            }
+        }
+
+        &--absolute-box {
+            position: relative;
+            //min-height: 633px;
+            min-height: 0;
+            overflow: hidden;
+            @include under(sm) {
+                min-height: 0;
+            }
+        }
+
+        @include under(cart) {
+            &.hide--sm {display: none;}
+        }
+    }
+
+    &__box {
+        @include width(418px);
+        overflow: hidden;//para que cuando se  vaya de un paso del checkout al otro los contenidos desaparezcan sin problemas con el envío
+        &--absolute {
+            // position: absolute;
+            position: relative;
+            top: 0;
+            left: 0;
+            background-color: rgba(255,255,255,0.7);
+            height: 100%;
+            @include under(sm) {
+                position: relative;
+            }
+        }
+        &-right {
+            padding-right: s(5/2);
+            margin-left: 0;
+            margin-right: auto;
+
+            &-thanks {
+                @include under(cart) {
+                    margin-bottom: s(4);
+                    text-align: center;
+                }
+            }
+
+            &-invoice {
+                margin-bottom: 277px;
+
+                @include under(cart) {
+                    margin-bottom: s(4);
+                }
+            }
+        }
+
+        &-left {
+            margin-left: auto;
+            margin-right: 0;
+            padding-left: s(5/2);
+            &-thanks {
+                @include width(100%);
+                margin-bottom: 177px;
+            }
+
+            &-invoice {
+                @include under(cart) {
+                    margin-bottom: 177px;
+                }
+            }
+        }
+
+        &-right,
+        &-left {
+            margin-bottom: s(6);
+            @include over(cart) {
+                margin-bottom: s(6);
+            }
+            @include under(sm) {
+                margin-bottom: 0;
+            }
+        }
+
+
+        @include under(sm) {
+            padding-right: 0;
+            padding-left: 0;
+        }
+
+        @include under(cart) {
+            @include width(100%);
+            text-align: center;
+        }
+    }
+}

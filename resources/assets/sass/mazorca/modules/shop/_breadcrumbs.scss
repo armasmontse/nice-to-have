@@ -1,0 +1,10 @@
+.breadcrumbs {
+	line-height: 150%;
+	margin-bottom: s(2, m);
+	@include sidebar-padding;
+	&__link {
+		@extend %link;
+		display: inline;
+		font-size: 9px;
+	}
+}

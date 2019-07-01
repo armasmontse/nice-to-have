@@ -1,0 +1,189 @@
+.input {
+    width: 100%;
+    margin-bottom: 10px;
+    font-family: f(sans);
+    font-size: 14px;
+    color: $brand-primary;
+    -webkit-box-shadow: none !important;
+    -moz-box-shadow: none !important;
+    box-shadow: none !important;
+    outline: none;
+
+    &:last-of-type {
+        margin-bottom: 0;
+    }
+
+    &-label {
+        @extend .text__p;
+        margin-bottom: 10px;
+    }
+
+    &__file {
+        position: relative;
+        overflow: hidden;
+
+        .hide-input {
+            width: 100%;
+            min-width: 100%;
+            min-height: 100%;
+            padding: 0 0.5em;
+            position: absolute;
+            top: 0;
+            right: 0;
+            opacity: 0;
+            cursor: pointer;
+        }
+    }
+
+    &__submit {
+        margin-bottom: 10px;
+        font-family: f(sans);
+        font-size: 12px;
+        color: white;
+        text-transform: uppercase;
+        outline: none !important;
+
+        &:last-of-type {
+            margin-bottom: 0;
+        }
+
+        &--black {
+            background-color: c();
+            color: c(white);
+        }
+
+        &--wider {
+            height: auto;
+            font-size: 14px;
+            padding-top: 15px;
+            padding-bottom: 15px;
+            letter-spacing: 0.5px;
+        }
+
+    }
+
+    &__search {
+        padding-top: 11px;
+        border: 0;
+        border-bottom: 1px solid $brand-primary;
+    }
+
+    &__select {
+        font-family: f(sans);
+        font-size: 14px;
+        border-radius: 0;
+        border: 1px solid $gray-base;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        -webkit-box-shadow: none !important;
+        -moz-box-shadow: none !important;
+        cursor: pointer;
+        background-color: transparent;
+
+        &-container {
+            position: relative;
+            background-color: transparent;
+        }
+
+        &-arrow {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            z-index: -1;
+        }
+    }
+
+    &__checkbox {
+
+        cursor: pointer;
+        padding: 0;
+        height: 1rem;
+        width: 1rem;
+        vertical-align: text-top;
+        margin: 1.5px !important;
+        outline: none !important;
+        border: 1px solid $brand-primary;
+        border-radius: 1px;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+
+        &-label {
+            font-family: f(sans);
+            font-size: 14px;
+            text-transform: none;
+            color: $brand-primary;
+            cursor: pointer;
+        }
+
+        &:checked {
+            border-color: $brand-primary;
+            background-color: $brand-primary;
+        }
+    }
+
+    //Estilos de DataTables
+
+    &__table-search,
+    &__table-select--pagination{
+        padding-top: 0px !important;
+        padding-right: 23px !important;
+        padding-bottom: 0px !important;
+        padding-left: 27px !important;
+        height: 20px !important;
+        line-height: 17px !important;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        -webkit-box-shadow: none !important;
+        -moz-box-shadow: none !important;
+        outline: none !important;
+        background-color: #f3f2f1;
+        border-color: transparent;
+        -webkit-border-radius: 0;
+        -moz-border-radius: 0;
+        border-radius: 0;
+
+        &:focus {
+            border-color: transparent;
+        }
+    }
+
+    &__table-search {
+        padding-top: 4px !important;
+        padding-left: 10px !important;
+        padding-bottom: 5px !important;
+        margin-left: 5px;
+        -webkit-box-shadow: none !important;
+        -moz-box-shadow: none !important;
+        box-shadow: none !important;
+        outline: none;
+    }
+
+    &--no-border {
+        border-top: none;
+        border-left: none;
+        border-right: none;
+    }
+}
+
+input::-webkit-inner-spin-button {
+    top: -2px;
+    position: relative;
+}
+
+.row-mt {
+    margin-top: 5%;
+}
+
+.mt-checkbox {
+    margin-top: 2%;
+}
+
+.input-field {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 5%;
+}

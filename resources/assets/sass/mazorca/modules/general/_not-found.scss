@@ -1,0 +1,23 @@
+.not-found {
+	&__container {
+		padding: 100px 25px;
+		text-align: center;
+		@include under(sm) {
+			padding: 50px 25px;
+		}
+		&--up {
+			border-bottom: 1px solid c(grey);
+		}
+	}
+	&--ttl {
+		margin: 0 auto;
+		display: inline-block;
+	}
+	&--p {
+		font-size: 17px;
+		line-height: 150%;
+		font-family: f(benton);
+		letter-spacing: 1px !important;
+		text-transform: none;
+	}
+}

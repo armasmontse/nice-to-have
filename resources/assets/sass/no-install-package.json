@@ -1,0 +1,31 @@
+{
+  "name": "mazorca",
+  "version": "1.0.0",
+  "description": "Scss Framework of El Cultivo",
+  "main": "./core/core.scss",
+  "directories": {
+    "docs": "docs"
+  },
+  "dependencies": {
+    "mazorca-core": "^1.*"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/diegovdc/mazorca.git"
+  },
+  "keywords": [
+    "SCSS",
+    "framework",
+    "mixins"
+  ],
+  "author": "Diego Villaseñor",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/diegovdc/mazorca/issues"
+  },
+  "homepage": "https://github.com/diegovdc/mazorca#readme"
+}

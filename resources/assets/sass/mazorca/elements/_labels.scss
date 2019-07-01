@@ -1,0 +1,9 @@
+%label {
+    @extend %title-sans--secondary;
+    font-size: 11px;
+}
+
+.admin-label {
+	@extend %label;
+	display: block;
+}

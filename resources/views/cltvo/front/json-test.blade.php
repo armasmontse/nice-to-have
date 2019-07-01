@@ -1,0 +1,22 @@
+@extends('layouts.test-client', ['body_id'	=> 	'no-vue'])
+
+@section('content')
+<?php 
+/*
+$algo = 'lorem \r\n ipsum' ;
+$jsoned = json_encode($algo);
+*/
+
+$jsoned = '[{"id":163,"product_id":2,"order":1,"title":"fasdfasd","content":"sadf\r\nasdf","languages":[{"id":1,"iso6391":"es","language_label":"Espa\u00f1ol","language_id":1,"product_section_id":163,"title":"fasdfasd","content":"sadf\r\nasdf","pivot":{"product_section_id":163,"language_id":1,"title":"fasdfasd","content":"sadf\r\nasdf","created_at":"2016-10-26 08:27:27","updated_at":"2016-10-26 08:27:27"}}]},{"id":23,"product_id":2,"order":42,"title":"Magnam voluptas debitis distinctio.","content":"Aliquam in et officiis accusamus quis rerum. Earum cumque ea quas quia fugiat. Eos incidunt minima laboriosam dicta et.","languages":[{"id":1,"iso6391":"es","language_label":"Espa\u00f1ol","language_id":1,"product_section_id":23,"title":"Magnam voluptas debitis distinctio.","content":"Aliquam in et officiis accusamus quis rerum. Earum cumque ea quas quia fugiat. Eos incidunt minima laboriosam dicta et.","pivot":{"product_section_id":23,"language_id":1,"title":"Magnam voluptas debitis distinctio.","content":"Aliquam in et officiis accusamus quis rerum. Earum cumque ea quas quia fugiat. Eos incidunt minima laboriosam dicta et.","created_at":"2016-10-25 16:07:30","updated_at":"2016-10-25 16:07:30"}}]},{"id":140,"product_id":2,"order":376,"title":"Et sequi minus reiciendis laboriosam ea ut non.","content":"Voluptate sint enim quidem qui ut excepturi. Veritatis quia esse quis nobis suscipit et. Dolor architecto aperiam pariatur accusantium. Culpa magnam tempore voluptatibus quaerat.","languages":[{"id":1,"iso6391":"es","language_label":"Espa\u00f1ol","language_id":1,"product_section_id":140,"title":"Et sequi minus reiciendis laboriosam ea ut non.","content":"Voluptate sint enim quidem qui ut excepturi. Veritatis quia esse quis nobis suscipit et. Dolor architecto aperiam pariatur accusantium. Culpa magnam tempore voluptatibus quaerat.","pivot":{"product_section_id":140,"language_id":1,"title":"Et sequi minus reiciendis laboriosam ea ut non.","content":"Voluptate sint enim quidem qui ut excepturi. Veritatis quia esse quis nobis suscipit et. Dolor architecto aperiam pariatur accusantium. Culpa magnam tempore voluptatibus quaerat.","created_at":"2016-10-25 16:07:36","updated_at":"2016-10-25 16:07:36"}}]},{"id":42,"product_id":2,"order":502,"title":"Commodi odio voluptas nihil nihil eius et.","content":"Et voluptas sint corporis corporis. Ipsum qui recusandae repellat non a eligendi. Repellendus in aut sapiente commodi veniam inventore. Occaecati voluptas earum voluptas est. Atque voluptas quia et.","languages":[{"id":1,"iso6391":"es","language_label":"Espa\u00f1ol","language_id":1,"product_section_id":42,"title":"Commodi odio voluptas nihil nihil eius et.","content":"Et voluptas sint corporis corporis. Ipsum qui recusandae repellat non a eligendi. Repellendus in aut sapiente commodi veniam inventore. Occaecati voluptas earum voluptas est. Atque voluptas quia et.","pivot":{"product_section_id":42,"language_id":1,"title":"Commodi odio voluptas nihil nihil eius et.","content":"Et voluptas sint corporis corporis. Ipsum qui recusandae repellat non a eligendi. Repellendus in aut sapiente commodi veniam inventore. Occaecati voluptas earum voluptas est. Atque voluptas quia et.","created_at":"2016-10-25 16:07:31","updated_at":"2016-10-25 16:07:31"}}]},{"id":146,"product_id":2,"order":739,"title":"Quod vel suscipit aut est magnam nemo voluptate sit.","content":"Quis quia id est voluptatem impedit odit. Repellat et voluptatem quos accusantium. Rerum iusto et corrupti omnis.","languages":[{"id":1,"iso6391":"es","language_label":"Espa\u00f1ol","language_id":1,"product_section_id":146,"title":"Quod vel suscipit aut est magnam nemo voluptate sit.","content":"Quis quia id est voluptatem impedit odit. Repellat et voluptatem quos accusantium. Rerum iusto et corrupti omnis.","pivot":{"product_section_id":146,"language_id":1,"title":"Quod vel suscipit aut est magnam nemo voluptate sit.","content":"Quis quia id est voluptatem impedit odit. Repellat et voluptatem quos accusantium. Rerum iusto et corrupti omnis.","created_at":"2016-10-25 16:07:36","updated_at":"2016-10-25 16:07:36"}}]}]';
+?>
+<script>
+/*
+ */
+
+	var algo = '<?php echo $jsoned ?>'
+	console.log(algo);
+	var jsoned = JSON.parse(algo)
+	console.log(jsoned);
+</script>
+@endsection
+

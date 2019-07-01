@@ -1,0 +1,54 @@
+@media (min-width: 768px) {
+	.footer {
+		padding-right: 40px;
+		padding-left: 40px;
+	}
+}
+
+.footer {
+	$height: 60px;
+	width: 100%;
+	display: flex;
+	background-color: $brand-primary;
+	&--left {
+		width: 30%;
+		padding: 0 20px;
+		text-align: left;
+	}
+	&--right {
+		width: 70%;
+		padding: 0 20px;
+		text-align: right;
+	}
+
+	&__container {
+		height: $height;
+		margin-top: $height;
+		background-color: $brand-primary;
+		color: $body-bg;
+	}
+
+	&__logo {
+		width: 80px;
+	}
+
+	&__credits {
+		@extend .text__p-white;
+		align-self: center;
+
+		&-container {
+			height: $height;
+			display: flex;
+			justify-content: flex-end;
+		}
+	}
+
+	&__link {
+		color: $gray-base;
+
+		&:hover {
+			color: $brand-info;
+			text-decoration: none;
+		}
+	}
+}

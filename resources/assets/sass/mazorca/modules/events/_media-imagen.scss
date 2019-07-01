@@ -1,0 +1,244 @@
+#media_imagen {
+	.event {
+	    &__cover-page {
+	        width: 100%;
+	        height: 315px;
+	        background-size: cover;
+	        background-repeat: no-repeat;
+	        background-position: center;
+	    }
+	    &__main-section {
+	        padding-top: s(3);
+	        padding-bottom: s(4);
+	    }
+	    &__confirmation-form {
+	        padding-top: 99px;
+	        padding-top: 99px;
+	        padding-bottom: 95px;
+	    }
+	    &__input-container {
+	        margin-top: 32px;
+	        margin-bottom: 31px;
+	    }
+	    &__input {
+	        @include width(435px);
+	    }
+	    &__image {
+	        max-width: 1152px;
+	        width: 100%;
+	        height: 100%;
+	    }
+	    &__recommendations-container {
+	        margin-bottom: 25px;
+	        &:last-of-type {
+	            margin-bottom: 0;
+	        }
+	    }
+	    &__button {
+	        display: block;
+	        margin-right: auto;
+	        margin-left: auto;
+	    }
+	    &__name {
+	        @extend %title-dala-floda--xl;
+	        margin-bottom: 14px;
+	    }
+	    &__countdown {
+	        @extend %title-dala-moa;
+	        margin-bottom: s(2);
+	        &--sm {
+	            @extend %title-dala-floda;
+	            margin-bottom: 24px;
+	        }
+	    }
+	    &__paragraph {
+	        @extend %paragraph;
+	        font-family: f(benton);
+	        font-size: 14px;
+	        letter-spacing: .8px;
+	        line-height: 18px;
+	        &-bohemian {
+	            @extend %paragraph-bohemian;
+	        }
+	        &--sm {
+	            @extend .event__paragraph;
+	            font-size: 11px;
+	            color: c();
+	            margin-top: 10px;
+				text-align: left;
+    			margin-left: 12%;
+				@include under (cart-price) {
+					margin-left: 0%;
+				}
+	        }
+	    }
+	    &__link {
+	        @extend %link-underline;
+	        display: block;
+	        margin-bottom: 57px;
+	    }
+	    &__delimiter {
+	        @include delimiter('/', 0, 0);
+	        display: inline-block;
+	    }
+	    &__title {
+	        padding-top: 99px;
+	    }
+	    &__map {
+	        text-align: center;
+	        &-link {
+	            margin-bottom: 13px;
+	        }
+	    }
+	    &__section {
+	        padding-bottom: 95px;
+	        text-align: left;
+	    }
+	    &__diary-container {
+	        margin-bottom: 17px;
+	        &:last-of-type {
+	            margin-bottom: 0;
+	        }
+	    }
+		&__menu {
+			display: flex;
+			width: 100%;
+			justify-content: center;
+			align-items: stretch;
+			align-content: stretch;
+			flex-flow: row wrap;
+			margin-top: 0;
+			margin-bottom: s(9);
+
+			&--item {
+				color: c(web-gray);
+				font-size: 14px;
+				line-height: 200%;
+				margin: 0 12px;
+				text-transform: uppercase;
+				font-family: f(benton);
+				@include under(cart) {
+					font-size: 12px;
+				}
+			}
+		}
+	    &__title, // secciones que el usuario ingresa en el wysiwyg
+	    &__section,
+	    &__map {
+	        h1, h2, h3, h4, h5, h6 {
+	            @extend %title-bohemian;
+	            margin-bottom: 35px;
+	            text-align: center;
+	        }
+	        h4 { margin-bottom: 22px;}
+	        h4, h5 { text-align: left; }
+	        h5 { text-transform: none; }
+	        p {
+	            @extend %paragraph;
+	            font-size: 14px;
+	            letter-spacing: .7px;
+	            line-height: 20px;
+	            i { font-style: italic;}
+	            b { font-weight: bold;}
+	            u { text-decoration: underline;}
+	            a {
+	                font-family: f(benton);
+	                @extend .transition-fast;
+	                @include link-states {
+	                    color: c(grey);
+	                }
+	            }
+	        }
+	        a {
+	            @extend %link;
+	            text-transform: none;
+	            @extend .transition-fast;
+	            @include link-states {
+	                color: c(grey);
+	            }
+	        }
+	        span {
+	            @extend %paragraph;
+	            font-size: 14px;
+	            letter-spacing: .7px;
+	            i { font-style: italic;}
+	            b { font-weight: bold;}
+	            u { text-decoration: underline;}
+	            a {
+	                font-family: f(benton);
+	                @extend .transition-fast;
+	                @include link-states {
+	                    color: c(grey);
+	                }
+	            }
+	            @include under(xs) {
+	                span {
+	                    b {display: block; background-color: red;}
+	                }
+	            }
+	        }
+	    }
+	    &__scrolloff {
+	        pointer-events: none;
+	    }
+
+		&__section {
+			&--iframe {
+				width: 100%;
+				display: block;
+				position: relative;
+				margin-bottom: s(10);
+				padding-bottom: 56.25%;
+			}
+		}
+
+	}
+
+	&__map {
+		margin-top: 30px;
+		margin-bottom: 10px;
+		position: relative;
+		height: 0;
+		overflow: hidden;
+
+		&-link {
+			margin-bottom: 30px;
+			font-family: f(serifa);
+			color: #58595B;
+			text-decoration: underline;
+			text-align: center;
+		}
+	}
+
+	.iframe {
+
+		&--16by9 {
+    		padding-bottom: 56.25%;
+		}
+
+		&--4by3 {
+    		padding-bottom: 75%;
+		}
+
+		&--10by3 {
+    		padding-bottom: 350px;
+		}
+
+		&--youtube{
+			height: 100%;
+			width: 100%;
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+
+		&--google{
+			position: absolute;
+			top:0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+		}
+
+	}
+}

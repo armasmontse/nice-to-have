@@ -1,0 +1,1 @@
+Estas imágenes pertenecen al datepicker de jquery ui y deben estar en este folder.

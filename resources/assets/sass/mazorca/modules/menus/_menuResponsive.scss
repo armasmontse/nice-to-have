@@ -1,0 +1,265 @@
+.menuResponsive {
+	min-height: 100%;
+	height: 100%;
+	z-index: z(menuMobil);
+	width: 100%;
+
+	&__bag-counter {
+		color: c(white);
+		height: 22px;
+		min-width: 22px;
+		border: 1px solid c(light-blue);
+		display: inline-block;
+		text-align: center;
+		padding-top: 3px;
+		background-color: c(light-blue);
+		border-radius: 100%;
+		vertical-align: middle;
+		margin-top: -6px;
+		&:hover {
+			background-color: c(light-blue);
+		}
+	}
+
+	&__fixing-container {
+		&.open {
+			position: fixed;
+			top: 0;
+			right: 0;
+			left: 0;
+			bottom: 0;
+			z-index: z(menuMobil);
+			background-color: rgba(0,0,0,0.3);
+			@include ease-transition;
+		}
+	}
+	&__container {
+		background-color: c(white);
+		width: calc(100% - #{s(6, m)});
+		min-height: 100%;
+		z-index: z(menuMobil);
+		position: absolute !important;
+		top: 0;
+		left: 0;
+		overflow-y: auto;
+		height: 100vh;
+		&.filters {
+			padding-left: 20px;
+		}
+		&.filters, &.shop {
+			left: initial;
+			right: 0;
+			border-left: 1px c() solid;
+		}
+		&.main { border-right: 1px c() solid;}
+	}
+
+	&__outside-click-area { //ponemos un div debajo que evita que se pueda dar click a lo que está fuera del menu, pero que permite que el menu se cierre cuando se da click en ésta area
+		height: 100%;
+		width: 100%;
+		position: absolute;
+		top: 0;
+		z-index: 9;
+		overflow-y: scroll;
+	}
+	&, &__nav-container {
+		position: relative;
+		height: 100%;
+		background-color: c(white);
+	}
+
+	&__nav-container{
+		background-color: c(white);
+		min-height: 100%;
+		min-height: 100vh;
+		width: 100%;
+		position: absolute;
+		top: 0;
+	}
+
+	.menuMain {
+		padding-left: 0;
+		padding-right: 0;
+		display: block !important;
+	}
+
+	.menuMain__link-container,
+	.menu-social {
+		flex-direction: column;
+	}
+
+	.footer__social {
+		max-width: 100%;
+		margin-bottom: 0;
+		text-align: left;
+	}
+
+	.menu-social__link--blog {display: none;}
+
+	.userAccountMenu__link-container,
+	.shoppingBagMenu__link-container {
+		background-color: c(white);
+		width: 100%;
+		margin: 0;
+		position: relative;
+		left: 0;
+	}
+
+	.menu-footer__delimiter {
+		display: block;
+	}
+
+	&__link,
+	.menu-footer__link,
+	.menu-social__link,
+	.menuMain__link,
+	.userAccountMenu__link,
+	.shoppingBagMenu__link,
+	.shop__ttl--filter,
+	.shop__checkbox-label {
+		@extend %link;
+		color: c();
+		font-size: 15px;
+		display: block;
+		position: relative;
+		padding-top: s(2, m);
+		padding-bottom: s(2, m);
+		margin-bottom: 0;
+		@include under(sm) {
+			padding: 15px 0 10px 0;
+		}
+	}
+
+	.shop__checkbox-label {
+		display: inline !important;
+		padding-top: 0 !important;
+		padding-bottom: 0 !important;
+	}
+
+	.shop__ttl--filter {
+		padding-right: s(4, m);
+		padding-bottom: 0;
+		.menuResponsive__arrow-container {
+			top: -8px;//ajuste para centrar el arrow
+		}
+	}
+
+	.shop__checkbox-label {
+		display: inline-block;
+		top: 5.5px;
+		left: 6px;
+	}
+
+	.shop__price-range-input-container {
+		padding: 0;
+		padding-top: s(2, m);
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.userAccountMenu__dash,
+	.shoppingBagMenu__dash, {
+		top: -13px;
+	}
+
+
+
+	&__section {
+		padding-top: s(2, m);
+		padding-bottom: s(2, m);
+	}
+
+	&__container-padding {
+		padding-left: s(3, m);
+		padding-right: s(3, m);
+		padding-top: s(1, m);
+
+		& .footer__social .menu-social__link--blog{
+			display: none;
+		}
+	}
+
+	&__divisor-container {
+		padding-left: s(2, m);
+		padding-right: s(2, m);
+	}
+
+	&__header {
+		&-logo {
+			@include size(138px, 17px)
+			svg {
+				height: 15px;
+				overflow: visible;
+			}
+			polygon, path, rect { fill: c()}
+		}
+		&-ttl {
+			@extend %paragraph;
+			color: c(grey);
+			line-height: 1.2;
+			text-transform: uppercase;
+			text-align: center;
+			padding-top: s(2, m);
+			padding-bottom: s(2, m);
+			position: relative;
+		}
+	}
+
+	&__button {
+		@extend .input__submit;
+		&-container {
+			text-align: center;
+			padding-bottom: s(2, m);
+			height: 54.4px;//mantiene espacio en el header del menu
+			overflow:visible;//por si el boton se sale del height
+		}
+	}
+
+	&__arrow {
+		@include size(7px, 12px)
+		@include center('y');
+		cursor: pointer;
+	    box-sizing: initial;//permite que el padding crezca sin afectar el tamaño de la flecha
+	    padding: 12px;
+		&-container {
+			height: 100%;
+			width: 100%;
+			position: relative;
+		}
+
+		&--right {
+			right: s(-2, m);
+		}
+		&--left {
+			left: s(1, m);
+		}
+	}
+
+//las pantallas flotantes
+	&__screen, .cuadro {
+		position: absolute;
+		top: 0;
+		width: 100%;
+		min-height: 200px;
+		background-color: white;
+		z-index: z(menuMobil-level1);
+	}
+	&__screen0, .cuadro0 {
+		z-index: z(menuMobil-level0);
+	}
+	&__screen2, .cuadro2 {
+		z-index: z(menuMobil-level2);
+	}
+
+	&__selected-subs {
+		@extend %paragraph;
+		color: c(grey);
+		font-size: 11px;
+		text-transform: none;
+		&-container {
+			padding-left: s(4, m);
+			padding-right: s(4, m);
+			padding-bottom: s(2, m);
+		}
+	}
+}

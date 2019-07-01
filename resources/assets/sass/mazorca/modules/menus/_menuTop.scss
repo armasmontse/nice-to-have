@@ -1,0 +1,120 @@
+.menuTop {
+	display: flex;
+	align-items: center;
+	background-color: c();
+	height: 30px;
+	position: fixed;
+	top:0;
+	left: 0;
+	width: 100%;
+	z-index: z(sobre-menu-sticky);
+
+	&__container {
+		display: flex;
+		justify-content: space-between;
+	}
+	&__hamburger,
+	&__close {
+		@include size(20px, 12px);
+		cursor: pointer;
+		svg, .st0 {
+			fill: c(white) !important;
+			stroke: c(white) !important;
+		}
+	}
+
+	&__col {
+		&--left {}
+		&--right {}
+		&--logo {
+			@include size(100px, 11px);
+			@include center('xy');
+			display: none;
+		}
+
+		&--logo {
+			top: 50%;
+			@include under(sm) { display: none !important;}
+		}
+
+		&--search {
+			@include under(sm) {
+				@include center('xy')
+			}
+		}
+
+		&--hamburger {
+			color: c(white);
+			display: none;
+			font-size: 20px;
+			line-height: 60%;
+			padding-right: 20px;
+			padding-left: 20px;
+			left: -20px;
+			position: relative;
+			
+			@include under(sm) {
+				cursor: pointer;
+				display: block;
+			}
+
+		}
+	}
+
+
+	&__searchbar,
+	&__link {
+		@extend %link-menu;
+		font-size: 13px;
+		&, span, a {
+			color: c(white);
+		}
+	}
+
+	&__link {
+		position: relative;
+		&-account {
+			position: relative;
+			margin-right: 56px;
+			.input__select-arrow  {
+				transform-origin: center;
+			    transform: translateY(-31%);
+				//right: -20px;
+				z-index: 1;
+				.st0{
+					fill: c(white);
+					stroke: none;
+				}
+			}
+			// @include under(sm) { display: none !important;}
+		}
+
+		&--bag {
+			&:hover a {
+				color: darken(c(white), 15%);
+			}
+			padding-left: 30px;//para la pos abs de menu__bag-counter
+		}
+	}
+
+	&__bag-counter {
+		border: 1px solid c(light-blue);
+		background-color: c(light-blue);
+		border-radius: 100%;
+		display: inline-block;
+		text-align: center;
+		min-width: 22px;
+		height: 22px;
+		@include center('y');
+		padding-top: 4px;
+		left: 0;
+		&:hover {
+			background-color: c(light-blue);
+		}
+	}
+
+	&__menuUser{
+		display: flex;
+		@include under(xs) { display: none !important;}
+	}
+}

@@ -1,0 +1,18 @@
+.admin {
+	* { box-sizing: border-box;}
+	padding-top: 12px;
+	&__content {
+		width: calc(100% - 220px);
+		float: right;
+		@media (max-width: 768px) {
+			width: 100%;
+		}
+		&--row {
+			width: 100%; max-width: 1024px;
+			min-height: calc(100vh - 120px);
+			margin: 0 auto;
+			padding: 60px 20px;
+			overflow: auto;
+		}
+	}
+}

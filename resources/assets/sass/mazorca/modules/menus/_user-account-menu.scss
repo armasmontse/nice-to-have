@@ -1,0 +1,41 @@
+.userAccountMenu {
+    @include menuTopSubmenu;
+
+    &__button-as-link {
+        @extend %link-menu;
+        font-size: 13px;
+        color: c(white);
+        text-transform: uppercase;
+        position: relative;
+        top: -3px;
+        background-color: transparent;
+        border: 0;
+        padding: 0;
+        margin-bottom: 7px;
+        text-align: left;
+
+        @include under(sm) {
+            color: c();
+            font-size: 15px;
+        }
+
+        &-container {
+            @extend %link-menu;
+            display: block;
+            font-size: 13px;
+            position: relative;
+            color: c(white);
+            @include under(sm) {
+                padding: 15px 0 10px 0;
+                color: c();
+            }
+        }
+    }
+
+    &__link {
+        display: block;
+        &-login {
+            margin-bottom: s();
+        }
+    }
+}

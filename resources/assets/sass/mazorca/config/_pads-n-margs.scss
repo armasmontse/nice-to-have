@@ -1,0 +1,60 @@
+$pads: (
+	p: $base-px,
+	pt: $base-px,
+	pb: $base-px,
+	pl: $base-px,
+	pr: $base-px,
+	gutter: 25px,
+	body: 25px,
+	header: 161px
+	);
+
+$margs: (
+	m: 12px,
+	mt: $base-px,
+	mb: $base-px,
+	ml: $base-px,
+	mr: $base-px,
+	md:40px,
+	lg:100px,
+	xl:165px,
+	info-secion-ttl: 9px //30px
+	);
+
+$lh : (
+	base: 22px,
+	sm:	14.4px,
+	md: 18px,
+	lg: 20px,
+	title: 1,
+	placeholder: 16.8px,
+	);
+
+$mb: (
+	base: $base-px
+	);
+
+$spacings: (mb: $mb, pads:$pads, margs:$margs, lh: $lh);
+
+@function s($multiplier: 1, $spacing:'') {
+	@if map-has-key($pads, $spacing) {
+		@return map-get($pads, $spacing) * $multiplier;
+	}
+	@if map-has-key($margs, $spacing) {
+		@return map-get($margs, $spacing) * $multiplier;
+	}
+
+	@return $base-px * $multiplier;
+}
+
+@function lh($spacing: base) {
+	@if map-has-key($lh, $spacing) {
+		@return map-get($lh, $spacing);
+	}
+}
+
+@function m($spacing: base) {
+	@if map-has-key($m, $spacing) {
+		@return map-get($m, $spacing);
+	}
+}

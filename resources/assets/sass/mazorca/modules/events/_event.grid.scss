@@ -1,0 +1,31 @@
+.event {
+    &__row {
+        top: 30px;
+    }
+
+    &__col {
+        &-1-1 {
+            max-width: 564px;
+            width: 100%;
+            text-align: center;
+        }
+
+		&-2-1 {
+            max-width: 862px;
+            width: 100%;
+            text-align: center;
+        }
+		&-2-2 {
+			max-width: 318px;
+			width: 50%;
+			text-align: center;
+		}
+
+        &-1-2 {
+            max-width: 282px;
+            width: 50%;
+            text-align: center;
+        }
+
+	}
+}

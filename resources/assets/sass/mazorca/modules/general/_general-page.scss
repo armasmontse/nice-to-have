@@ -1,0 +1,142 @@
+.general-page {
+	.divisor {
+		margin-bottom: s(1, lg);
+	}
+	&__main-content {//puesto que el usuario ingresa estos contenidos desde un wysiwyg usamos selectores descendentes
+		h1, h2, h3, h4, h5, h6 {
+			@extend %title-sans--sm;
+			margin-bottom: 4px; //s(1, m)
+			text-align: center;
+			letter-spacing: 4px;
+			line-height: 21px;
+			i { font-style: italic;}
+			b { font-weight: bold;}
+			u { text-decoration: underline;}
+		}
+		p, ul, ol {
+			@extend %paragraph;
+			margin-bottom: 44px; //s(1, info-secion-ttl)
+			letter-spacing: .5px;
+			text-align: center;
+			// text-align-last: left;
+
+			i { font-style: italic;}
+			b { font-weight: bold;}
+			u { text-decoration: underline;}
+			a {
+				@extend .transition-fast;
+				text-decoration: underline;
+				@include link-states {
+					color: c(grey);
+				}
+			}
+		}
+
+        ol.lower-alpha {
+            list-style-type: lower-alpha;
+            margin-left: 18px;
+        }
+
+		ul li {
+			&:before{
+				content:'\002D ';
+			}
+		}
+
+		li {
+			margin-bottom: s(2);
+		}
+
+	}
+	&__col-1-1 {
+		@include width(564px);
+		margin-bottom: s(5);
+		// text-align: justify;
+		// text-align-last: left;
+	}
+
+	&__select {
+		cursor: pointer;
+	}
+
+	&-info-section {
+		width: 100%;
+
+		&__container {
+			padding-top: s(1, lg);
+			padding-bottom: s(1, lg);
+		}
+
+		&__col {
+
+			&-1-1 {
+				@include width(564px);
+			}
+		}
+
+		&__ttl {
+			@extend %title-sans--sm;
+			margin-bottom: s(1, info-secion-ttl);
+			text-align: center;
+			letter-spacing: 4px;
+	        line-height: 2;
+	        cursor: pointer;
+			&--big {
+				font-size: 14px;
+			}
+
+			&-italic {
+				@extend .info-section__ttl;
+				font-family: f(serif);
+				font-size: 31px;
+				text-transform: none;
+				letter-spacing: 1px;
+			}
+		}
+
+		&__p {
+			@extend %paragraph--lg;
+			text-align-last: center;
+			text-align: center;
+			div, p, span {
+				@extend %paragraph--lg;
+			}
+			&--small {
+				font-size: 15px !important;
+				div, p, span {
+					@extend %paragraph--lg;
+					font-size: 15px !important;
+				}
+			}
+		}
+
+		&__link {
+			@extend .transition-fast;
+			@extend %paragraph--price;
+			letter-spacing: 2px;
+			text-transform: uppercase;
+			line-height: 36px;
+			@include link-states {
+				color: c(grey);
+			}
+			&-container {
+				margin-left: auto;
+				margin-right: auto;
+				display: flex;
+				justify-content: center;
+			}
+		}
+
+		&__caret {
+			svg {
+				height: 6px;
+				position: relative;
+				top: -1px;
+				&.flip {
+					left: -3px;
+					* {stroke: c()}
+				}
+			}
+		}
+	}
+}

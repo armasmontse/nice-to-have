@@ -1,0 +1,217 @@
+@import "_users.grid";
+
+.users {
+
+    &__text {
+        @extend %title-sans;
+        letter-spacing: s();
+        text-align: center;
+
+        &--subtitle,
+        &--data {
+            @extend %title-sans--secondary;
+            letter-spacing: 0.5px;
+            &-block {
+                padding-top: 9px;
+                display: block;
+
+                @include under(905px) {
+                    margin-bottom: 10px;
+                }
+
+                @include under(cart) {
+                    padding-top: 9px;
+                    display: block;
+                }
+
+                @include under(418px) {
+                    margin-bottom: 10px;
+                }
+            }
+
+            &-block-hira {
+                @extend %paragraph;
+                font-family: f(serif);
+                display: block;
+            }
+
+            &-status {
+                font-weight: lighter;
+                color: c(mid-grey);
+            }
+
+            &-bank {
+                display: block;
+                line-height: lh();
+            }
+        }
+
+        &--subtitle {
+            letter-spacing: 1px;
+        }
+
+        &--data {
+            text-transform: none;
+        }
+    }
+
+    &__title-container {
+        margin-bottom: 18px;
+
+        @include under(cart) {
+            text-align: center;
+        }
+
+        &--md {
+            margin-bottom: 26px;
+            @include under(cart) {
+                text-align: center;
+            }
+        }
+
+        &--lg {
+            margin-bottom: s(5);
+
+            &-center {
+                text-align: center;
+            }
+
+            @include under(cart) {
+                text-align: center;
+            }
+        }
+    }
+
+    &__user-container {
+        margin-bottom: s(3);
+
+        &--lg {
+            margin-bottom: s(4);
+        }
+
+        @include under(cart) {
+            text-align: center;
+        }
+    }
+
+    &__input-container {
+        padding-left: s(2);
+        margin-bottom: s(4);
+
+        @include under(xs) {
+            max-width: 328px;
+            width: 100%;
+            margin-right: auto;
+            margin-left: auto;
+            padding-left: 0;
+        }
+    }
+
+
+    &__payment-container {
+        margin-bottom: s();
+        padding-left: s(2);
+        display: flex;
+        justify-content: space-between;
+
+        &:last-of-type {
+            margin-bottom: 0;
+        }
+    }
+    
+    &__submit-btn {
+        margin: 0 15px;
+    }
+
+    &__submit-container {
+        margin-bottom: s(4);
+        display: flex;
+        justify-content: center;
+
+        &--lg {
+            min-height: 181px;
+            margin-bottom: 0;
+        }
+    }
+
+    &__button {
+        align-self: center;
+
+        &--sm {
+            text-align: center;
+        }
+
+        &--bank {
+            @include under(cart) {
+                margin-right: auto;
+                margin-left: auto;
+            }
+        }
+
+        //Temporal: quitar cuando se puedan crear eventos
+        &-coming-soon { display: none; }
+
+        &:hover {
+            .users__button-create {display: none;}
+            .users__button-coming-soon {display: inline;}
+        }
+    }
+
+    &__event-name-container,
+    &__general-info-container {
+        margin-bottom: 11px;
+    }
+
+    &__status-container {
+        margin-bottom: s(3/2);
+    }
+
+    &__link-container {
+        margin-bottom: 31px;
+    }
+
+    &__link {
+        @extend %link-underline;
+    }
+
+    &__payment-child-container {
+        margin-bottom: s();
+        padding-left: s(2);
+        display: flex;
+        justify-content: space-between;
+
+        @include under(905px) {
+            width: 100%;
+            flex-direction: column;
+            margin-bottom: s(2);
+            text-align: center;
+        }
+
+        @include under(cart) {
+            flex-direction: row;
+            justify-content: space-between;
+            margin-right: auto;
+            margin-left: auto;
+            padding-left: 0;
+        }
+
+        @include under(418px) {
+            width: 100%;
+            flex-direction: column;
+            margin-bottom: s(2);
+            text-align: center;
+        }
+
+        &:last-of-type {
+            margin-bottom: s(4);
+        }
+    }
+
+    &__bank-account-container {
+        padding-left: s(2);
+
+        @include under(cart) {
+            padding-left: 0;
+        }
+    }
+}

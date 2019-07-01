@@ -1,0 +1,12 @@
+.text {
+    &__alert {
+
+        &-success,
+        &-danger {
+            color: c() !important;
+            font-size: 14px;
+            font-family: f(serif);
+        }
+
+    }
+}

@@ -1,0 +1,45 @@
+.userEvent {
+
+    &__col-1-2 {
+        padding-right: 12.5px;
+        padding-left: 0;
+    }
+
+    &__col-2-2 {
+        padding-right: 0;
+        padding-left: 12.5px;
+    }
+
+    &__box {
+        overflow: hidden;
+    }
+
+    &__title {
+        font-weight: bold;
+        font-size: 16px;
+        text-transform: uppercase;
+    }
+
+    &__paragraph{
+        font-size: 14px;
+    }
+
+    &--number {
+        display: inline-block;
+        font-size: 13px;
+        margin-top: 5px;
+        line-height: 160%;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+    }
+
+}
+
+.flex-cont--sb {
+    display: flex !important;
+    justify-content: space-between !important;
+}
+
+.mb2m {
+    margin-bottom: 24px !important;
+}

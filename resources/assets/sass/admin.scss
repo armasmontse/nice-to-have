@@ -1,0 +1,88 @@
+@charset "UTF-8";
+
+// Fonts
+@import "admin/modules/_fonts";
+
+//=== Vendor ===//
+@import "node_modules/mazorca-core/_mazorca-core.scss";
+// Bootcrap
+@import "admin/_bootstrap-variables";
+@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+//Otros
+@import "admin/modules/_data-table";
+@import "admin/_vue-html5-editor";
+
+/*Our Code*/
+
+@import "admin/modules/_admin";
+@import "admin/modules/_text";
+@import "admin/modules/_link";
+@import "admin/modules/_main";
+
+@import "admin/modules/_welcome";
+@import "admin/modules/_menu";
+@import "admin/modules/_sidebar";
+@import "admin/modules/_footer";
+@import "admin/modules/_content";
+@import "admin/modules/_fonts";
+@import "admin/modules/_alert";
+@import "admin/modules/_inputs";
+@import "admin/modules/_text";
+@import "admin/modules/_divisor";
+@import "admin/modules/_button";
+@import "admin/modules/_icon";
+@import "admin/modules/_video";
+@import "admin/modules/_product";
+@import "admin/modules/_carts";
+@import "admin/modules/_cart";
+@import "admin/modules/_event";
+
+@import "admin/modules/modals/_modal";
+
+
+//ejemplo de como agregar los estilos faltantes del vue html5 editor
+.vue-html5-editor.vue-html5-editor {
+	&  .content {
+		ul  li {
+
+			list-style-type: disc !important;
+
+		}
+
+		ol li{
+
+			list-style-type:decimal !important;
+
+		}
+
+		u {
+    			text-decoration: underline;
+		}
+
+		b {
+    			font-weight: bold !important;
+		}
+
+		i {
+			font-style: italic;
+		}
+
+	}
+}
+
+
+
+$breaks: ();//para que no se rompa?
+@import "admin/modules/_image";
+@import "admin/modules/_media-manager";
+
+//Helpers
+.w-100 { width: 100%  !important;}
+.text-overflow-ellipsis {
+	text-overflow: ellipsis !important;
+    overflow: hidden !important;
+    white-space: nowrap !important;
+}
+.switch-label {
+	margin-bottom: 6%;
+}

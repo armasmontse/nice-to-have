@@ -1,0 +1,6 @@
+*
+!.gitignore
+!country_seeder
+!country_seeder/*
+!states
+!states/*

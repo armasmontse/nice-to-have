@@ -1,0 +1,48 @@
+.button {
+    font-family: f(sans);
+    font-size: 14px;
+    text-transform: uppercase;
+    border: 0;
+    outline: none !important;
+
+    &__col {
+        margin-top: 25px;
+    }
+
+    &__as-link {
+        @extend .button;
+        padding: 20px;
+        color: $gray-base;
+        text-transform: none;
+        background-color: transparent;
+        border: 0;
+        transform: translateY(3px);
+        -webkit-appereance: none;
+        -moz-appereance: none;
+        appereance: none;
+        outline: none;
+
+        &:active,
+        &:hover {
+            color: $brand-info;
+        }
+    }
+}
+.save-btn {
+    margin-top: 50%;
+}
+
+.create-btn {
+    color: white;
+}
+
+.btn-delete {
+    background-color: transparent;
+    border: none;
+}
+
+.align-input-icon {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

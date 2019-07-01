@@ -1,0 +1,12 @@
+@supports (-ms-ime-align:auto) {
+  .single__container--info-favorites-buttons-container {
+    max-width: 310px;
+  }
+  .checkout__link-as-button--sm {
+  	max-width: 182px;
+  }
+
+  .checkout__box {
+  	overflow: visible;
+  }
+}

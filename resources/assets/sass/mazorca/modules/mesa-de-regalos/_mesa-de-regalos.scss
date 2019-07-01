@@ -1,0 +1,51 @@
+.mesa-de-regalos {
+	&__user-container  {
+		@include over(xs) { text-align: left !important; } }
+
+	&__container--users {
+		padding-bottom: (102px - 30px);//30 es el mb de .users__user-container
+	}
+
+
+	&__button {
+		position: relative;
+		background-color: c();
+		color: c(white);
+		padding-left: 35px;
+		transition: all 0.2s ease;
+
+		&:hover {
+			background-color: c(white);
+			color: c();
+		}
+
+		&-icon {
+			@include center('y');
+			left: 12px;
+			svg {
+				height: 17px;
+				width: 11px;
+			}
+		}
+	}
+	&__search {
+		&-title {
+			font-family: f(serif);
+			font-size: 31px;
+			text-align: center;
+			&--small {
+				font-size: 23px;
+			}
+		}
+
+		&-container {
+			padding-top: 140px;
+			padding-bottom: 48px;
+
+			&--pt-sm {
+				padding-top: 100px;
+			}
+		}
+		&-br	{@include under(sm) {display: none;}}
+	}
+}

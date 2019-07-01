@@ -1,0 +1,13 @@
+.icon {
+    font-size: 20px;
+    outline: none !important;
+    background-color: transparent;
+    border: 0;
+    -moz-appereance: none;
+    -webkit-appereance: none;
+    appereance: none;
+
+    &:focus {
+        outline: none !important;
+    }
+}

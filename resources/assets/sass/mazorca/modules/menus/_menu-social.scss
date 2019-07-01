@@ -1,0 +1,26 @@
+.menu-social {
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 34px;
+	display: flex;
+	justify-content: space-between;
+
+	&__link {
+        @extend %link;
+        //font-family: f(serif);
+        color: c(white);
+        line-height: lh(sm);
+
+        @include under(xs) {
+            margin-bottom: 21px;
+            &:nth-of-type(3n) {
+                margin-bottom: 0;
+            }
+        }
+	}
+
+    @include under(xs){
+        flex-direction: column;
+        text-align: center;
+    }
+}

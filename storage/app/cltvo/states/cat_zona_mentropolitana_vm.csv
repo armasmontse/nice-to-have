@@ -1,0 +1,77 @@
+"CVE_ENT,C,2","NOM_ENT,C,110","NOM_ABR,C,16","CVE_MUN,C,3","NOM_MUN,C,110","CVE_CAB,C,9","NOM_CAB,C,110","PTOT,C,11","PMAS,C,11","PFEM,C,11","VTOT,C,11"
+9,Ciudad de México,CDMX,2,Azcapotzalco,----,,414711,196053,218658,117264
+9,Ciudad de México,CDMX,3,Coyoacán,----,,620416,292491,327925,180946
+9,Ciudad de México,CDMX,4,Cuajimalpa de Morelos,----,,186391,88642,97749,47897
+9,Ciudad de México,CDMX,5,Gustavo A. Madero,----,,1185772,571233,614539,320756
+9,Ciudad de México,CDMX,6,Iztacalco,----,,384326,182534,201792,104406
+9,Ciudad de México,CDMX,7,Iztapalapa,----,,1815786,880998,934788,460747
+9,Ciudad de México,CDMX,8,La Magdalena Contreras,----,,239086,114492,124594,63267
+9,Ciudad de México,CDMX,9,Milpa Alta,----,,130582,64192,66390,31820
+9,Ciudad de México,CDMX,10,́Álvaro Obregón,----,,727034,346041,380993,197926
+9,Ciudad de México,CDMX,11,Tláhuac,----,,360265,175210,185055,91254
+9,Ciudad de México,CDMX,12,Tlalpan,----,,650567,312139,338428,176086
+9,Ciudad de México,CDMX,13,Xochimilco,----,,415007,205305,209702,102778
+9,Ciudad de México,CDMX,14,Benito Juárez,----,,385439,176410,209029,141203
+9,Ciudad de México,CDMX,15,Cuauht̩moc,----,,531831,251725,280106,173907
+9,Ciudad de México,CDMX,16,Miguel Hidalgo,----,,372889,172667,200222,120186
+9,Ciudad de México,CDMX,17,Venustiano Carranza,----,,430978,203651,227327,123327
+13,Hidalgo,Hgo.,69,Tizayuca,1,Tizayuca,97461,48102,49359,25329
+15,México,Mex.,2,Acolman,1,Acolman de Nezahualcóyotl,136558,68392,68166,33781
+15,México,Mex.,9,Amecameca,1,Amecameca de Juárez,48421,23240,25181,11366
+15,México,Mex.,10,Apaxco,1,Apaxco de Ocampo,27521,13576,13945,6514
+15,México,Mex.,11,Atenco,1,San Salvador Atenco,56243,27933,28310,12483
+15,México,Mex.,13,Atizapán de Zaragoza,1,Ciudad López Mateos,489937,238124,251813,129313
+15,México,Mex.,15,Atlautla,1,Atlautla de Victoria,27663,13396,14267,6266
+15,México,Mex.,16,Axapusco,1,Axapusco,25559,12666,12893,6356
+15,México,Mex.,17,Ayapango,1,Ayapango de Gabriel Ramos M.,8864,4353,4511,2310
+15,México,Mex.,20,Coacalco de Berriozábal,1,San Francisco Coacalco,278064,134141,143923,75062
+15,México,Mex.,22,Cocotitlán,1,Cocotitlán,12142,5976,6166,3056
+15,México,Mex.,23,Coyotepec,1,Coyotepec,39030,19282,19748,8497
+15,México,Mex.,24,Cuautitlán,1,Cuautitlán,140059,69079,70980,36891
+15,México,Mex.,25,Chalco,1,Chalco de Díaz Covarrubias,310130,151403,158727,74775
+15,México,Mex.,28,Chiautla,1,Chiautla,26191,12759,13432,5943
+15,México,Mex.,29,Chicoloapan,1,Chicoloapan de Juárez,175053,85377,89676,44666
+15,México,Mex.,30,Chiconcuac,1,Chiconcuac de Juárez,22819,11138,11681,4707
+15,México,Mex.,31,Chimalhuacán,1,Chimalhuacán,614453,302297,312156,147765
+15,México,Mex.,33,Ecatepec de Morelos,1,Ecatepec de Morelos,1656107,806443,849664,419118
+15,México,Mex.,34,Ecatzingo,1,Ecatzingo de Hidalgo,9369,4582,4787,2073
+15,México,Mex.,35,Huehuetoca,1,Huehuetoca,100023,49372,50651,25188
+15,México,Mex.,36,Hueypoxtla,1,Hueypoxtla,39864,19860,20004,9094
+15,México,Mex.,37,Huixquilucan,1,Huixquilucan de Degollado,242167,116502,125665,62409
+15,México,Mex.,38,Isidro Fabela,1,Tlazala de Fabela,10308,5097,5211,2461
+15,México,Mex.,39,Ixtapaluca,1,Ixtapaluca,467361,227846,239515,118691
+15,México,Mex.,44,Jaltenco,1,Jaltenco,26328,12844,13484,6448
+15,México,Mex.,46,Jilotzingo,1,Santa Ana Jilotzingo,17970,8864,9106,4273
+15,México,Mex.,50,Juchitepec,1,Juchitepec de Mariano Rivapalacio,23497,11503,11994,5794
+15,México,Mex.,53,Melchor Ocampo,1,Melchor Ocampo,50240,24570,25670,11308
+15,México,Mex.,57,Naucalpan de Juárez,1,Naucalpan de Juárez,833779,404974,428805,219310
+15,México,Mex.,58,Nezahualcóyotl,1,Ciudad Nezahualcóyotl,1110565,536943,573622,285045
+15,México,Mex.,59,Nextlalpan,1,Santa Ana Nextlalpan,31691,15637,16054,7861
+15,México,Mex.,60,Nicolás Romero,1,Ciudad Nicolás Romero,366602,180139,186463,91357
+15,México,Mex.,61,Nopaltepec,1,Nopaltepec,8895,4427,4468,2289
+15,México,Mex.,65,Otumba,1,Otumba de Gómez Farías,34232,17330,16902,7894
+15,México,Mex.,68,Ozumba,1,Ozumba de Alzate,27207,13077,14130,6298
+15,México,Mex.,69,Papalotla,1,Papalotla,4147,2012,2135,962
+15,México,Mex.,70,La Paz,1,Los Reyes Acaquilpan,253845,123956,129889,62492
+15,México,Mex.,75,San Martín de las Pirámides,1,San Martín de las Pirámides,24851,12278,12573,6070
+15,México,Mex.,81,Tecámac,1,Tecámac de Felipe Villanueva,364579,177713,186866,97150
+15,México,Mex.,83,Temamatla,1,Temamatla,11206,5447,5759,2772
+15,México,Mex.,84,Temascalapa,1,Temascalapa,35987,17916,18071,8869
+15,México,Mex.,89,Tenango del Aire,1,Tenango del Aire,10578,5164,5414,2595
+15,México,Mex.,91,Teoloyucan,1,Teoloyucan,63115,31240,31875,14632
+15,México,Mex.,92,Teotihuacán,1,Teotihuacán de Arista,53010,26000,27010,12936
+15,México,Mex.,93,Tepetlaoxtoc,1,Tepetlaoxtoc de Hidalgo,27944,13714,14230,6481
+15,México,Mex.,94,Tepetlixpa,1,Tepetlixpa,18327,9003,9324,4297
+15,México,Mex.,95,Tepotzotlán,1,Tepotzotlán,88559,43521,45038,21530
+15,México,Mex.,96,Tequixquiac,1,Tequixquiac,33907,16794,17113,8252
+15,México,Mex.,99,Texcoco,1,Texcoco de Mora,235151,115648,119503,56481
+15,México,Mex.,100,Tezoyuca,1,Tezoyuca,35199,17404,17795,8334
+15,México,Mex.,103,Tlalmanalco,1,Tlalmanalco de Velázquez,46130,22333,23797,11498
+15,México,Mex.,104,Tlalnepantla de Baz,1,Tlalnepantla,664225,321747,342478,177317
+15,México,Mex.,108,Tultepec,1,Tultepec,131567,64287,67280,33089
+15,México,Mex.,109,Tultitlán,1,Tultitlán de Mariano Escobedo,486998,238340,248658,125151
+15,México,Mex.,112,Villa del Carbón,1,Villa del Carbón,44881,22433,22448,10271
+15,México,Mex.,120,Zumpango,1,Zumpango de Ocampo,159647,78608,81039,37647
+15,México,Mex.,121,Cuautitlán Izcalli,1,Cuautitlán Izcalli,511675,248552,263123,135024
+15,México,Mex.,122,Valle de Chalco Solidaridad,1,Xico,357645,175772,181873,89563
+15,México,Mex.,125,Tonanitla,1,Santa María Tonanitla,10216,5058,5158,2415

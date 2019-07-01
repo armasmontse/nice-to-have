@@ -1,0 +1,19 @@
+.wysiwyg {
+	@extend %paragraph;
+	font-size: 18px;
+	i { @extend %paragraph; font-size: italic !important;}
+	b { @extend %paragraph; font-weight: bold !important;}
+	a { @extend %paragraph; text-decoration: underline !important;}
+	li { @extend %paragraph; margin-bottom: 5px !important;}
+	ul, ol { 
+		@extend %paragraph;
+		margin: 15px 0 !important; 
+		text-align: left !important; 
+		letter-spacing: 0 !important;
+	}
+	div, p, span {
+		@extend %paragraph;
+		font-size: 18px;
+	}
+	* { @extend %paragraph; }
+} 

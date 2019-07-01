@@ -1,0 +1,65 @@
+.sidebar {
+	float: left;
+	width: 220px;
+	display: block;
+	overflow: auto;
+	position: fixed;
+	font-size: 14px;
+	height: calc(100vh - 60px);
+	font-family: f(sans);
+	padding-top: 20px;
+	background-color: #E3DFDB;	
+	@media (max-width: 768px) {
+		display: none;
+	}
+	&__nav {
+
+		& > li > a { //& > li > a
+			color: $brand-info;
+			padding-right: 20px;
+			padding-left: 20px;
+			cursor: pointer;
+			text-transform: uppercase;
+		}
+
+		&-label {
+			padding: 10px 20px;
+			display: block;
+			position: relative;
+			color: $brand-info;
+			text-transform: uppercase;
+			cursor: pointer;
+
+			&.active,
+			&.active:hover,
+			&.active:focus {
+				color: $gray-base;
+				background-color: $brand-primary;
+			}
+
+			&:hover {
+				text-decoration: none;
+				background-color: $body-bg;
+			}
+		}
+
+		&--nested-ul {
+			display: none;
+			> li > a {
+				display: block;
+				padding: 10px 0 10px 35px;
+				&:hover {
+					text-decoration: none;
+					background-color: rgba(255,255,255,0.3);
+				}
+			}
+		}
+
+		& > .active > a,
+		& > .active > a:hover,
+		& > .active > a:focus {
+			color: $gray-base;
+			background-color: #312822;
+		}
+	}
+}

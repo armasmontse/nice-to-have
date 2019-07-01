@@ -1,0 +1,71 @@
+@media only screen and (max-width: 1024px) {
+    .cols-over-eight {
+        overflow-x: scroll;
+        overflow-y: hidden;
+        margin-bottom: 5px;
+    }
+}
+
+.dataTables_length,
+.dataTables_filter,
+.dataTables_info,
+.dataTables_paginate {
+    @extend .text__p;
+    @extend .col-xs-6;
+}
+
+.dataTables_length,
+.dataTables_filter {
+    margin-bottom: 25px;
+}
+
+.dataTables_filter,
+.dataTables_paginate {
+    text-align: right;
+}
+
+.dataTables_empty {
+    text-align: center;
+}
+
+.paginate_button {
+    color: $brand-primary;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.next {
+    margin-right: 0;
+}
+
+.paginate_button:active,
+.paginate_button:hover,
+.paginate_button:focus {
+
+    font-weight: bold;
+}
+
+.pagination > .active > a,
+.pagination > .active > span,
+.pagination > .active > span:hover,
+.pagination > .active > span:focus {
+    background-color: #BCBEC0;
+    border-color: #939598;
+
+}
+
+.pagination > .active > a:hover,
+.pagination > li > a:hover,
+.pagination > .active > a:focus {
+    background-color: #939598;
+    border-color: #BCBEC0;
+    outline: none !important;
+}
+
+a:focus {
+    outline: none !important;
+}
+
+.cursor-sortable {
+    cursor: pointer;
+}

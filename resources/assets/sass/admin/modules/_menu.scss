@@ -1,0 +1,21 @@
+.menu {
+    border: 0;
+
+    &__logo-container {
+        padding: 20px;
+    }
+
+    &__logo {
+        width: 150px;
+    }
+
+    &__link {
+        & > li > a {
+            padding: 20px;
+        }
+    }
+
+    &__navbar-toggle {
+        transform: translateY(3.1px);
+    }
+}

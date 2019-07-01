@@ -1,0 +1,9 @@
+<svg version="1.1" id="" class="input__select-arrow transition-fast" v-bind:class="{ 'flip': dropdown_select_is_open || isOpen }" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 6.8 2.6" style="enable-background:new 0 0 6.8 2.6;" xml:space="preserve">
+<g>
+	<g>
+		<g>
+			<path class="st0" d="M3.4,1.9L6.8,0v0.7L3.4,2.6L0,0.7V0L3.4,1.9z"/>
+		</g>
+	</g>
+</g>
+</svg>

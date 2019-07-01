@@ -1,0 +1,90 @@
+//_________________________ Modules _________________________ \\
+
+
+body {//para el position absolute del footer
+	padding-bottom: 292px;
+	@include under(sm) {
+		padding-bottom: 170px;
+	}
+}
+
+
+.login, .register, .email, .reset, .set {
+    @include form;
+}
+
+//_________________________ general _________________________ \\
+@import 'modules/general/_general-page';
+@import 'modules/general/_page-title';
+@import 'modules/general/_loader';
+@import 'modules/general/_alert';
+@import 'modules/general/_modal';
+@import 'modules/general/_input';
+@import 'modules/general/_header';
+@import "modules/general/_footer";
+@import "modules/general/_info-section";
+@import "modules/general/_preguntas-frecuentes";
+@import "modules/general/_relatedProducts";
+@import "modules/general/_loader";
+@import "modules/general/_splash";
+@import "modules/general/_icon";
+@import "modules/general/_not-found";
+@import "modules/general/_wysiwyg";
+
+
+//_________________________ Menus _________________________ \\
+@import 'modules/menus/_menuTop';
+@import 'modules/menus/_menuMain';
+@import 'modules/menus/_menuResponsive';
+@import 'modules/menus/_menu-social.scss';
+@import 'modules/menus/_menu-footer.scss';
+@import "modules/menus/_user-account-menu";
+@import "modules/menus/_shopping-bag-menu";
+
+//_________________________ shop _________________________ \\
+@mixin sidebar-padding { padding-left: s(2, m);}//sólo se usa en estas secciones
+@mixin main-padding { //padding-top: 34px
+}//sólo se usa en estas secciones
+@import "modules/shop/_shop";
+@import "modules/shop/_shop-product";
+@import "modules/shop/_breadcrumbs";
+
+//_________________________ single _________________________ \\
+@import "modules/single/_single";
+
+//_________________________ Mesa de regalos _________________________ \\
+@import "modules/mesa-de-regalos/_mesa-de-regalos";
+
+//_________________________ Shopping Cart _________________________ \\
+@import "modules/shopping-cart/_shopping-cart";
+
+//_________________________ Checkout _________________________ \\
+@import "modules/checkout/_checkout";
+
+//_________________________ Home _________________________ \\
+@import "modules/home/_home";
+
+//_________________________ Users _________________________ \\
+@import "modules/users/_users";
+
+//_________________________ Event _________________________ \\
+@import "modules/events/_event";
+@import "modules/events/_general-event";
+@import "modules/events/_userEvent";
+@import "modules/events/_create-event";
+//_________________________ Auth _________________________ \\
+
+
+
+
+.email, .reset {
+    &__button-container {
+        margin-bottom: 0;
+    }
+}
+
+.register {
+    &__row {
+        background-image: url(../../images/image-register-test.jpg);
+    }
+}

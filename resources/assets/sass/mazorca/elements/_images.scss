@@ -1,0 +1,7 @@
+%image {
+	display: block;
+}
+
+%shop-image {
+	@extend %image;
+}

@@ -1,0 +1,51 @@
+.text {
+    &__p {
+        font-family: f(sans);
+        font-size: 14px;
+        font-weight: normal;
+        color: $brand-primary;
+
+        &-white {
+            @extend .text__p;
+            color: $body-bg;
+        }
+
+        &-table-head {
+            text-transform: uppercase;
+        }
+
+        &-medium {
+            @extend .text__p;
+            font-size: 18px;
+            text-transform: none;
+        }
+
+        &--instructions {
+            color: #312822;
+            margin-bottom: 18px;
+
+            &-title {
+                @extend .text__p;
+                font-size: 18px;
+                text-transform: uppercase;
+                margin-bottom: 10px;
+            }
+        }
+    }
+
+    &__title {
+        @extend .text__p;
+        margin-bottom: 50px;
+        font-size: 20px;
+        text-transform: uppercase;
+    }
+
+    &__subtitle {
+        @extend .text__title;
+        font-size: 17px;
+        &--no-margin {
+            margin-bottom: 0;
+        }
+    }
+
+}

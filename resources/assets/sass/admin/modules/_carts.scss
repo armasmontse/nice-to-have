@@ -1,0 +1,17 @@
+.carts {
+	width: 100%;
+	a { text-decoration: underline;}
+	&--header {
+		font-weight: bold;
+	}
+	&--link {
+		cursor: pointer;
+	}
+	&--shipping {
+		max-width: 160px;
+	}
+	&__products {
+		list-style: circle;
+		margin-left: 15px;
+	}
+}

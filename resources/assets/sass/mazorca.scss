@@ -1,0 +1,58 @@
+@charset "UTF-8";
+//===Mazorca Core===//
+@import "node_modules/mazorca-core/_mazorca-core";
+
+//===Configs===//
+@import "mazorca/config/_config";
+
+//===Vendor===//Css begins compling here
+	// @import "vendor/bootstrap/_bootstrap.scss";
+@import "mazorca/vendor/_swiper.min";
+@import "mazorca/_cltvo-bootstrap_variables";
+@import "mazorca/vendor/_vue-animate";
+@import "admin/_vue-html5-editor";
+.vue-html5-editor.vue-html5-editor {
+	&  .content {
+		ul  li {
+
+			list-style-type: disc !important;	
+
+		}
+
+		ol li{
+
+			list-style-type:decimal !important;
+
+		}
+
+		u {
+    			text-decoration: underline;
+		}
+
+		b { 
+    			font-weight: bold !important;
+		}
+
+		i {
+			font-style: italic;
+		}
+
+	}
+}
+
+
+//===Boot===//
+@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_alerts";
+@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_opacity";
+@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_responsive-visibility";
+@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_alerts";
+@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_close";
+@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_responsive-utilities";
+
+//===Mazorca===//
+@import 'mazorca/_theme-helpers';
+@import "mazorca/_elements";
+@import "mazorca/_grid";//
+@import "mazorca/_components";
+@import "mazorca/_modules";
+@import "mazorca/IE";

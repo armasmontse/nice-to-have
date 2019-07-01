@@ -1,0 +1,103 @@
+.title-sans,
+%title-sans
+{
+    color: c();
+    font-family: f(gill);
+    font-size: 23px;
+    line-height: 120%;
+    text-transform: uppercase;
+}
+
+.title-sans--sm,
+%title-sans--sm
+{
+    @extend %title-sans;
+    font-size: 12px;
+}
+
+.title-sans--secondary,
+%title-sans--secondary
+{
+    @extend %title-sans;
+    font-family: f(benton);
+    font-size: 14px;
+    letter-spacing: 2px;
+}
+
+.title-serif,
+%title-serif
+{
+    @extend %title-sans;
+    font-family: f(serif);
+    font-size: 22px;
+    font-weight: normal;
+    text-transform: none;
+}
+
+.title-serif--lg,
+%title-serif--lg
+{
+    @extend %title-serif;
+    font-size: 38px;
+}
+
+.title-serif--xl,
+%title-serif--xl
+{
+    @extend %title-serif;
+    font-size: 72px;
+}
+
+.title-dala-floda--xl,
+%title-dala-floda--xl {
+    @extend %title-sans;
+    font-family: f(dala-floda);
+    font-size: 79px;
+}
+
+.title-brandon--xl,
+%title-brandon--xl {
+    @extend %title-sans;
+    font-family: f(brandon);
+    font-size: 22px;
+}
+
+.title-dala-moa,
+%title-dala-moa {
+    @extend %title-sans;
+    font-family: f(dala-moa);
+    font-size: 32px;
+    text-transform: none;
+}
+
+.title-merri-weather,
+%title-merri-weather {
+    @extend %title-sans;
+    font-family: f(merri-weather);
+    font-size: 11px;
+    text-transform: none;
+}
+
+.title-dala-floda,
+%title-dala-floda {
+    @extend %title-sans;
+    font-family: f(dala-floda);
+    font-size: 22px;
+}
+
+.title-bohemian,
+%title-bohemian {
+    @extend %title-sans;
+    font-family: f(bohemian);
+    font-size: 15px;
+    letter-spacing: 4px;
+}
+
+.title-h-merri-weather,
+%title-h-merri-weather {
+	@extend %title-sans;
+    font-family: f(merri-weather);
+    font-size: 16px;
+    letter-spacing: 4px;
+	// color: #919396;
+}

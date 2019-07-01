@@ -1,0 +1,1 @@
+@include('client.general.page-title', ['title' => 'Carrito'])

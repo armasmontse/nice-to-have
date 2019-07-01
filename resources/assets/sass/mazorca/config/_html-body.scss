@@ -1,0 +1,30 @@
+body, html { 
+	min-height: 100%;
+}
+@media print {
+	body {
+		padding-top: 50px !important;
+	}
+	nav, 
+	footer, 
+	.alerts__container,
+	.checkout__button-container {
+		display: none !important;
+	}
+	.header__logo {
+		padding-top: 0 !important;
+	}
+	.grid__col-1-2-uneven--lg,
+	.grid__col-1-2-uneven--sm {
+		width: 50% !important;
+	}
+	.checkout__order-container {
+		padding-left: 0 !important;
+	}
+	.checkout__container {
+		margin: 50px 0 !important;
+	}
+	.page-title__title {
+		font-size: 18px !important;
+	}
+}

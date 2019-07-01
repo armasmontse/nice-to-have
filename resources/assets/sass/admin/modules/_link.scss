@@ -1,0 +1,40 @@
+.link {
+    font-family: f(sans);
+    font-size: 14px;
+    text-decoration: none;
+
+    &:hover,
+    &:active {
+        color: $brand-info;
+        text-decoration: none;
+    }
+
+    &-underline {
+        @extend .link;
+        display: block;
+        margin-top: 10px;
+        color: $brand-primary;
+        text-decoration: underline;
+    }
+
+    &-as-button {
+        width: auto;
+        height: 32px;
+        margin-bottom: 25px;
+        padding: 8px 12px;
+        display: inline-block;
+        border: 1px solid $gray-base;
+        font-family: f(sans);
+        font-size: 14px;
+        text-transform: uppercase;
+        text-decoration: none !important;
+        color: $brand-primary;
+
+        &:hover,
+        &:active {
+            background-color: $brand-primary;
+            color: $body-bg;
+            border: 1px solid darken($brand-primary, 5%);
+        }
+    }
+}

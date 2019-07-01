@@ -1,0 +1,90 @@
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    min-height: 228px;
+	background-color: c();
+
+    @include over (sm) {
+    /*    bottom: 0; 
+       position: absolute; */
+    }
+	@include under(sm) {
+            padding-top: 0;
+        min-height: 160px;
+        // position: relative;
+	}
+
+	&__container {
+        width: 588px;
+        margin-right: auto;
+        margin-left: auto;
+        padding-top: s(4);
+        padding-bottom: 11px;
+	}
+
+    &__logo-container {
+        display: flex;
+        justify-content: center;
+    }
+
+    &__logo {
+        width: 219px;
+        height: 39px;
+        overflow: visible;
+        svg {
+            overflow: visible
+        }
+        path, .st0 {
+            fill: c(white) !important;
+            stroke: transparent;
+        }
+    }
+
+	&__menus-container {
+        padding-top: 37px;
+
+        @include under(sm) {
+            display: none;
+        }
+	}
+
+	&__social {
+        max-width: 400px; //cambiar a 305px cuando existan links de redes sociales y blog
+        width: 100%;
+	}
+
+	&__help {
+        max-width: 100%;
+	}
+
+    &__info-container {
+        display: flex;
+        justify-content: center;
+
+        @include under(sm) {
+            padding-top: s(6);
+            justify-content: space-between;
+        }
+    }
+
+    &__text {
+        @extend %paragraph;
+        font-size: 11px;
+        line-height: lh(md);
+        color: c(dark-grey);
+
+        &:nth-of-type(1) {
+            padding-right: s();
+        }
+    }
+
+    &__link {
+        @extend %link;
+        font-size: 11px;
+        line-height: lh(md);
+        color: c(dark-grey);
+        text-transform: none;
+        text-decoration: underline;
+    }
+}

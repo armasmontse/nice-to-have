@@ -1,0 +1,15 @@
+/* Tal como está el loading icon funciona para el checkout, si se necestia en otro lado, refactorizar */
+.loader{
+	// width: calc(50% - 2.5px);
+	// height: 39px;
+	// margin: 0;
+	// margin-top: 29px;
+	height: 31px;
+	text-align: center;
+	margin: 0;
+	width: calc(50% - 2.5px);
+	display: inline-block;
+	vertical-align: top;
+	position: relative;
+	top: -5px;
+}

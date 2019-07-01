@@ -1,0 +1,34 @@
+.link ,
+%link
+{
+	color: c();
+	cursor: pointer;
+	display: inline-block;
+	font-family: f(benton);
+	font-size: 14px;
+	text-decoration: none;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-weight: lighter;
+
+	&.selected,
+	&:hover,
+	&:active {
+		color: c(grey);
+	}
+}
+
+.link-menu ,
+%link-menu
+{
+	@extend %link;
+}
+
+.link-underline ,
+%link-underline
+{
+	@extend %link;
+	font-size: 12px;
+	text-decoration: underline;
+	text-transform: none;
+}
