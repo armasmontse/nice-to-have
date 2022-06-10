@@ -11,7 +11,7 @@
         "nesbot/carbon": "~1.14",
         "intervention/image": "2.3",
         "conekta/conekta-php": "~2.0",
-        "guzzlehttp/guzzle": "5.2",
+        "guzzlehttp/guzzle": "6.5.7",
         "felixkiss/uniquewith-validator": "2.*",
         "anhskohbo/no-captcha": "^2.1",
         "laravel/socialite": "~2.0",
